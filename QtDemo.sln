@@ -19,9 +19,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.3.2QContainerDemo", "QCon
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.1.2QStringDemo", "QStringDemo\QStringDemo.vcxproj", "{C6D2BF0D-F503-45D1-9973-BC34D4D84FC1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.2CommonComponent", "CommonComponent\CommonComponent.vcxproj", "{F5487737-570E-4385-84D3-D5CA40ACE401}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonComponent", "CommonComponent\CommonComponent.vcxproj", "{F5487737-570E-4385-84D3-D5CA40ACE401}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QSpinBoxDemo", "QSpinBoxDemo\QSpinBoxDemo.vcxproj", "{D18C0852-1ED0-42BD-97C3-46586E43B454}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.2.1QSpinBoxDemo", "QSpinBoxDemo\QSpinBoxDemo.vcxproj", "{D18C0852-1ED0-42BD-97C3-46586E43B454}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QSliderDemo", "QSliderDemo\QSliderDemo.vcxproj", "{8A73A873-5065-4A81-843A-E5BBC987ECD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{D18C0852-1ED0-42BD-97C3-46586E43B454}.Debug|x86.Build.0 = Debug|Win32
 		{D18C0852-1ED0-42BD-97C3-46586E43B454}.Release|x86.ActiveCfg = Release|Win32
 		{D18C0852-1ED0-42BD-97C3-46586E43B454}.Release|x86.Build.0 = Release|Win32
+		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Debug|x86.ActiveCfg = Debug|Win32
+		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Debug|x86.Build.0 = Debug|Win32
+		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Release|x86.ActiveCfg = Release|Win32
+		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
