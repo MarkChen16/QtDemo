@@ -1,8 +1,10 @@
-#include <QtCore/QCoreApplication>
+ï»¿#include <QtCore/QCoreApplication>
 
 #include <iostream>
 
 using namespace std;
+
+#pragma execution_character_set("UTF-8")
 
 
 int main(int argc, char *argv[])
@@ -11,21 +13,21 @@ int main(int argc, char *argv[])
 
 	QString str1, str2, str3;
 
-	//×ª»»Îª×Ö·û´®
+	//è½¬æ¢ä¸ºå­—ç¬¦ä¸²
 	str1 = QString::number(123, 16);
 	str2 = QString::asprintf("%.2f", 123.456);
 	str3 = str3.sprintf("%d", 789);
 
-	//×ª»»ÎªÊıÖµ
+	//è½¬æ¢ä¸ºæ•°å€¼
 	int i = str1.toInt();
 
 	int j = str1.toInt(nullptr, 16);
 
 	int k = str3.toInt(nullptr, 8);
 
-	//³£ÓÃ¹¦ÄÜ
-	str1.prepend("¿ªÊ¼");
-	str1.append("½áÊø");
+	//å¸¸ç”¨åŠŸèƒ½
+	str1.prepend("å¼€å§‹");
+	str1.append("ç»“æŸ");
 
 	str1 = str1.toUpper();
 	str1 = str1.toLower();
@@ -39,13 +41,20 @@ int main(int argc, char *argv[])
 	str1 = str2.simplified();
 
 	str3 = "C:\\123\\456\\123\\Info.txt";
-	int i4 = str3.indexOf("123", 0, Qt::CaseInsensitive);	//²»Çø·Ö´óĞ¡Ğ´
+	int i4 = str3.indexOf("123", 0, Qt::CaseInsensitive);	//ä¸åŒºåˆ†å¤§å°å†™
 	int i5 = str3.lastIndexOf("\\");
 
 	bool b1 = str3.contains("456");
 
+	bool b2 = str3.startsWith("C:\\");
+	bool b3 = str3.endsWith(".txt");
 
+	QString s1 = str3.left(3);
+	QString s2 = str3.right(3);
 
+	str3 = "1,é™ˆè´µå…¨,1986,æ±‰æ—,å¹¿ä¸œ,608";
+	QString s3 = str3.section(",", 1, 2);
+	QString s4 = str3.section(",", 3, 3);
 
 	return a.exec();
 }
