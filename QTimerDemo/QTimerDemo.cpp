@@ -1,6 +1,6 @@
-#include "CommonComponent.h"
+#include "QTimerDemo.h"
 
-CommonComponent::CommonComponent(QWidget *parent)
+QTimerDemo::QTimerDemo(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
@@ -18,7 +18,7 @@ CommonComponent::CommonComponent(QWidget *parent)
 	on_startTimer();
 }
 
-void CommonComponent::on_timer_timeout()
+void QTimerDemo::on_timer_timeout()
 {
 	QTime t = QTime::currentTime();
 	ui.lcdHour->display(t.hour());
@@ -31,7 +31,7 @@ void CommonComponent::on_timer_timeout()
 	ui.pbTimer->setValue(++iVal);
 }
 
-void CommonComponent::on_startTimer()
+void QTimerDemo::on_startTimer()
 {
 	fTimer->start();	//定时器
 
@@ -41,7 +41,7 @@ void CommonComponent::on_startTimer()
 	ui.btnStop->setEnabled(true);
 }
 
-void CommonComponent::on_stopTimer()
+void QTimerDemo::on_stopTimer()
 {
 	fTimer->stop();	//定时器
 

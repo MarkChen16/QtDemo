@@ -29,12 +29,12 @@
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{a6a9ffd7-d2ec-4ddf-aeaf-98cbc70bff7d}</UniqueIdentifier>
+      <UniqueIdentifier>{90664625-8ed3-4dc8-8d71-181fd6024853}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{57c9d60d-92b2-44aa-9866-d54de04871dc}</UniqueIdentifier>
+      <UniqueIdentifier>{9ba5f724-364e-4310-b3c2-bc2963219838}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
@@ -43,37 +43,37 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CommonComponent.cpp">
+    <ClCompile Include="QDateTimeDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_CommonComponent.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_QDateTimeDemo.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_CommonComponent.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_QDateTimeDemo.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_CommonComponent.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_QDateTimeDemo.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_CommonComponent.h">
+    <QtMoc Include="QDateTimeDemo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_QDateTimeDemo.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="CommonComponent.ui">
+    <QtUic Include="QDateTimeDemo.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="CommonComponent.qrc">
+    <QtRcc Include="QDateTimeDemo.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="CommonComponent.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
   </ItemGroup>
 </Project>

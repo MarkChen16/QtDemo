@@ -1,16 +1,17 @@
 #pragma once
 
 #include <QtWidgets/QDialog>
-#include "ui_CommonComponent.h"
+#include "ui_QTimeDemo.h"
 
 #include <qtimer.h>
+#include <qdatetime.h>
 
-class CommonComponent : public QDialog
+class QTimeDemo : public QDialog
 {
 	Q_OBJECT
 
 public:
-	CommonComponent(QWidget *parent = Q_NULLPTR);
+	QTimeDemo(QWidget *parent = Q_NULLPTR);
 
 	private slots:
 	void on_timer_timeout();
@@ -18,9 +19,8 @@ public:
 	void on_stopTimer();
 
 private:
-	Ui::CommonComponentClass ui;
+	Ui::QTimeDemoClass ui;
 
 	QTimer *fTimer;
-
 	QTime fTimeCounter;
 };

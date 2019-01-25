@@ -19,11 +19,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.3.2QContainerDemo", "QCon
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.1.2QStringDemo", "QStringDemo\QStringDemo.vcxproj", "{C6D2BF0D-F503-45D1-9973-BC34D4D84FC1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonComponent", "CommonComponent\CommonComponent.vcxproj", "{F5487737-570E-4385-84D3-D5CA40ACE401}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.2.1QSpinBoxDemo", "QSpinBoxDemo\QSpinBoxDemo.vcxproj", "{D18C0852-1ED0-42BD-97C3-46586E43B454}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QSliderDemo", "QSliderDemo\QSliderDemo.vcxproj", "{8A73A873-5065-4A81-843A-E5BBC987ECD8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.3.1QSliderDemo", "QSliderDemo\QSliderDemo.vcxproj", "{8A73A873-5065-4A81-843A-E5BBC987ECD8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.4.1QDateTimeDemo", "QDateTimeDemo\QDateTimeDemo.vcxproj", "{55B21515-8D2E-49E1-B52C-2E2EDA9E0B97}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.4.4QTimeDemo", "QTimeDemo\QTimeDemo.vcxproj", "{E7DB2D1A-4447-4702-B43A-066CE19F7904}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,10 +65,6 @@ Global
 		{C6D2BF0D-F503-45D1-9973-BC34D4D84FC1}.Debug|x86.Build.0 = Debug|Win32
 		{C6D2BF0D-F503-45D1-9973-BC34D4D84FC1}.Release|x86.ActiveCfg = Release|Win32
 		{C6D2BF0D-F503-45D1-9973-BC34D4D84FC1}.Release|x86.Build.0 = Release|Win32
-		{F5487737-570E-4385-84D3-D5CA40ACE401}.Debug|x86.ActiveCfg = Debug|Win32
-		{F5487737-570E-4385-84D3-D5CA40ACE401}.Debug|x86.Build.0 = Debug|Win32
-		{F5487737-570E-4385-84D3-D5CA40ACE401}.Release|x86.ActiveCfg = Release|Win32
-		{F5487737-570E-4385-84D3-D5CA40ACE401}.Release|x86.Build.0 = Release|Win32
 		{D18C0852-1ED0-42BD-97C3-46586E43B454}.Debug|x86.ActiveCfg = Debug|Win32
 		{D18C0852-1ED0-42BD-97C3-46586E43B454}.Debug|x86.Build.0 = Debug|Win32
 		{D18C0852-1ED0-42BD-97C3-46586E43B454}.Release|x86.ActiveCfg = Release|Win32
@@ -75,6 +73,14 @@ Global
 		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Debug|x86.Build.0 = Debug|Win32
 		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Release|x86.ActiveCfg = Release|Win32
 		{8A73A873-5065-4A81-843A-E5BBC987ECD8}.Release|x86.Build.0 = Release|Win32
+		{55B21515-8D2E-49E1-B52C-2E2EDA9E0B97}.Debug|x86.ActiveCfg = Debug|Win32
+		{55B21515-8D2E-49E1-B52C-2E2EDA9E0B97}.Debug|x86.Build.0 = Debug|Win32
+		{55B21515-8D2E-49E1-B52C-2E2EDA9E0B97}.Release|x86.ActiveCfg = Release|Win32
+		{55B21515-8D2E-49E1-B52C-2E2EDA9E0B97}.Release|x86.Build.0 = Release|Win32
+		{E7DB2D1A-4447-4702-B43A-066CE19F7904}.Debug|x86.ActiveCfg = Debug|Win32
+		{E7DB2D1A-4447-4702-B43A-066CE19F7904}.Debug|x86.Build.0 = Debug|Win32
+		{E7DB2D1A-4447-4702-B43A-066CE19F7904}.Release|x86.ActiveCfg = Release|Win32
+		{E7DB2D1A-4447-4702-B43A-066CE19F7904}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
