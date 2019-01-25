@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>QDateTimeDemo</string>
   </property>
-  <widget class="QDateEdit" name="dateEdit">
+  <widget class="QDateEdit" name="dEdit">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -26,7 +26,7 @@
     <string>yyyy年MM月dd</string>
    </property>
   </widget>
-  <widget class="QTimeEdit" name="timeEdit">
+  <widget class="QTimeEdit" name="tEdit">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -39,7 +39,7 @@
     <string>hh:mm:ss zzz</string>
    </property>
   </widget>
-  <widget class="QDateTimeEdit" name="dateTimeEdit">
+  <widget class="QDateTimeEdit" name="dtEdit">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -55,7 +55,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
+  <widget class="QCalendarWidget" name="cwNow">
    <property name="geometry">
     <rect>
      <x>100</x>

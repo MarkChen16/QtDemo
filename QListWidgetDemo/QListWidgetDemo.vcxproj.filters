@@ -29,12 +29,12 @@
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{9fe5cb70-5635-43c1-8c26-824be896d298}</UniqueIdentifier>
+      <UniqueIdentifier>{197a9265-888b-4747-9f63-736acbcda663}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{33fd5fd8-ada2-458a-afe8-12c59f9e2886}</UniqueIdentifier>
+      <UniqueIdentifier>{0187de30-b5da-49ec-bc0e-e08113d984e6}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
@@ -43,37 +43,37 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QTimerDemo.cpp">
+    <ClCompile Include="QListWidgetDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_QTimerDemo.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_QListWidgetDemo.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_QTimerDemo.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_QListWidgetDemo.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_QTimerDemo.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_QListWidgetDemo.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_QTimerDemo.h">
+    <QtMoc Include="QListWidgetDemo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_QListWidgetDemo.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="QTimerDemo.ui">
+    <QtUic Include="QListWidgetDemo.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="QTimerDemo.qrc">
+    <QtRcc Include="QListWidgetDemo.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="QTimerDemo.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
   </ItemGroup>
 </Project>

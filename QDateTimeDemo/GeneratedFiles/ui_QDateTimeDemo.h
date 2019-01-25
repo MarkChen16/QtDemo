@@ -25,29 +25,29 @@ QT_BEGIN_NAMESPACE
 class Ui_QDateTimeDemoClass
 {
 public:
-    QDateEdit *dateEdit;
-    QTimeEdit *timeEdit;
-    QDateTimeEdit *dateTimeEdit;
-    QCalendarWidget *calendarWidget;
+    QDateEdit *dEdit;
+    QTimeEdit *tEdit;
+    QDateTimeEdit *dtEdit;
+    QCalendarWidget *cwNow;
 
     void setupUi(QDialog *QDateTimeDemoClass)
     {
         if (QDateTimeDemoClass->objectName().isEmpty())
             QDateTimeDemoClass->setObjectName(QStringLiteral("QDateTimeDemoClass"));
         QDateTimeDemoClass->resize(444, 405);
-        dateEdit = new QDateEdit(QDateTimeDemoClass);
-        dateEdit->setObjectName(QStringLiteral("dateEdit"));
-        dateEdit->setGeometry(QRect(100, 90, 91, 22));
-        timeEdit = new QTimeEdit(QDateTimeDemoClass);
-        timeEdit->setObjectName(QStringLiteral("timeEdit"));
-        timeEdit->setGeometry(QRect(200, 90, 91, 22));
-        dateTimeEdit = new QDateTimeEdit(QDateTimeDemoClass);
-        dateTimeEdit->setObjectName(QStringLiteral("dateTimeEdit"));
-        dateTimeEdit->setGeometry(QRect(100, 50, 191, 22));
-        dateTimeEdit->setCalendarPopup(true);
-        calendarWidget = new QCalendarWidget(QDateTimeDemoClass);
-        calendarWidget->setObjectName(QStringLiteral("calendarWidget"));
-        calendarWidget->setGeometry(QRect(100, 140, 251, 211));
+        dEdit = new QDateEdit(QDateTimeDemoClass);
+        dEdit->setObjectName(QStringLiteral("dEdit"));
+        dEdit->setGeometry(QRect(100, 90, 91, 22));
+        tEdit = new QTimeEdit(QDateTimeDemoClass);
+        tEdit->setObjectName(QStringLiteral("tEdit"));
+        tEdit->setGeometry(QRect(200, 90, 91, 22));
+        dtEdit = new QDateTimeEdit(QDateTimeDemoClass);
+        dtEdit->setObjectName(QStringLiteral("dtEdit"));
+        dtEdit->setGeometry(QRect(100, 50, 191, 22));
+        dtEdit->setCalendarPopup(true);
+        cwNow = new QCalendarWidget(QDateTimeDemoClass);
+        cwNow->setObjectName(QStringLiteral("cwNow"));
+        cwNow->setGeometry(QRect(100, 140, 251, 211));
 
         retranslateUi(QDateTimeDemoClass);
 
@@ -57,9 +57,9 @@ public:
     void retranslateUi(QDialog *QDateTimeDemoClass)
     {
         QDateTimeDemoClass->setWindowTitle(QApplication::translate("QDateTimeDemoClass", "QDateTimeDemo", Q_NULLPTR));
-        dateEdit->setDisplayFormat(QApplication::translate("QDateTimeDemoClass", "yyyy\345\271\264MM\346\234\210dd", Q_NULLPTR));
-        timeEdit->setDisplayFormat(QApplication::translate("QDateTimeDemoClass", "hh:mm:ss zzz", Q_NULLPTR));
-        dateTimeEdit->setDisplayFormat(QApplication::translate("QDateTimeDemoClass", "yyyy-M-d H:mm:ss z", Q_NULLPTR));
+        dEdit->setDisplayFormat(QApplication::translate("QDateTimeDemoClass", "yyyy\345\271\264MM\346\234\210dd", Q_NULLPTR));
+        tEdit->setDisplayFormat(QApplication::translate("QDateTimeDemoClass", "hh:mm:ss zzz", Q_NULLPTR));
+        dtEdit->setDisplayFormat(QApplication::translate("QDateTimeDemoClass", "yyyy-M-d H:mm:ss z", Q_NULLPTR));
     } // retranslateUi
 
 };

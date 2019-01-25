@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/QComboBoxDemo">
+        <file>Resources/DISTLSTL.ICO</file>
+        <file>Resources/EXITEML.ICO</file>
+        <file>Resources/POSTL.ICO</file>
+        <file>Resources/RESENDL.ICO</file>
+        <file>Resources/SIGNL.ICO</file>
+    </qresource>
+</RCC>
