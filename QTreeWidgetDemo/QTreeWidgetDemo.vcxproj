@@ -11,9 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{57F3B985-9AFE-4FE8-9717-410A22EAC4C6}</ProjectGuid>
+    <ProjectGuid>{F2CDF299-8D2A-4AB8-A3AC-583A291E6008}</ProjectGuid>
     <Keyword>Qt4VSv1.0</Keyword>
-    <ProjectName>4.7.1QTreeWidgetDemo</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

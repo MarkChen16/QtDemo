@@ -1,9 +1,9 @@
 #pragma once
 
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QMainWindow>
 #include "ui_QTreeWidgetDemo.h"
 
-class QTreeWidgetDemo : public QWidget
+class QTreeWidgetDemo : public QMainWindow
 {
 	Q_OBJECT
 

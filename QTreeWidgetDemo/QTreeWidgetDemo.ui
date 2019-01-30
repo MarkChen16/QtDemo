@@ -1,25 +1,352 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>QTreeWidgetDemoClass</class>
- <widget class="QWidget" name="QTreeWidgetDemoClass" >
-  <property name="objectName" >
-   <string notr="true">QTreeWidgetDemoClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="QTreeWidgetDemoClass">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>816</width>
+    <height>408</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>QTreeWidgetDemo</string>
   </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>518</width>
+         <height>293</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>816</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actAddDir"/>
+   <addaction name="actAddFile"/>
+   <addaction name="actDelNode"/>
+   <addaction name="actLookup"/>
+   <addaction name="separator"/>
+   <addaction name="actBig"/>
+   <addaction name="actSmall"/>
+   <addaction name="actOrgSize"/>
+   <addaction name="actFixW"/>
+   <addaction name="actFixH"/>
+   <addaction name="separator"/>
+   <addaction name="actFloat"/>
+   <addaction name="actVisable"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="windowTitle">
+    <string>图片目录树</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QTreeWidget" name="treeWidget">
+       <column>
+        <property name="text">
+         <string>图片文件</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/QTreeWidgetDemo/Resources/MYSL.ICO</normalon>
+         </iconset>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>目录1</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/QTreeWidgetDemo/Resources/FOLDER.ICO</normalon>
+         </iconset>
+        </property>
+        <item>
+         <property name="text">
+          <string>文件1</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>文件2</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>文件3</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
+          </iconset>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>目录2</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/QTreeWidgetDemo/Resources/FOLDER.ICO</normalon>
+         </iconset>
+        </property>
+        <item>
+         <property name="text">
+          <string>文件4</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
+          </iconset>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>文件5</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
+          </iconset>
+         </property>
+        </item>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actAddDir">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/MYSL.ICO</normaloff>:/QTreeWidgetDemo/Resources/MYSL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>添加目录</string>
+   </property>
+   <property name="toolTip">
+    <string>添加目录</string>
+   </property>
+  </action>
+  <action name="actAddFile">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normaloff>:/QTreeWidgetDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>添加文件</string>
+   </property>
+   <property name="toolTip">
+    <string>添加文件</string>
+   </property>
+  </action>
+  <action name="actDelNode">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/SECURL.ICO</normaloff>:/QTreeWidgetDemo/Resources/SECURL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>删除节点</string>
+   </property>
+   <property name="toolTip">
+    <string>删除节点</string>
+   </property>
+  </action>
+  <action name="actLookup">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/EXITEML.ICO</normaloff>:/QTreeWidgetDemo/Resources/EXITEML.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>遍历节点</string>
+   </property>
+   <property name="toolTip">
+    <string>遍历节点</string>
+   </property>
+  </action>
+  <action name="actBig">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/REFBARH.ICO</normaloff>:/QTreeWidgetDemo/Resources/REFBARH.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="toolTip">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="actSmall">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/SECRECL.ICO</normaloff>:/QTreeWidgetDemo/Resources/SECRECL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="toolTip">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="actOrgSize">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/CNFNOT.ICO</normaloff>:/QTreeWidgetDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>实际大小</string>
+   </property>
+   <property name="toolTip">
+    <string>实际大小</string>
+   </property>
+  </action>
+  <action name="actFixW">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/TASKL.ICO</normaloff>:/QTreeWidgetDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>适合宽度</string>
+   </property>
+   <property name="toolTip">
+    <string>适合宽度</string>
+   </property>
+  </action>
+  <action name="actFixH">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/SCDRESTL.ICO</normaloff>:/QTreeWidgetDemo/Resources/SCDRESTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>适合高度</string>
+   </property>
+   <property name="toolTip">
+    <string>适合高度</string>
+   </property>
+  </action>
+  <action name="actFloat">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/POSTL.ICO</normaloff>:/QTreeWidgetDemo/Resources/POSTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>窗体浮动</string>
+   </property>
+   <property name="toolTip">
+    <string>窗体浮动</string>
+   </property>
+  </action>
+  <action name="actVisable">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/SIGNL.ICO</normaloff>:/QTreeWidgetDemo/Resources/SIGNL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>窗体可见</string>
+   </property>
+   <property name="toolTip">
+    <string>窗体可见</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="QTreeWidgetDemo.qrc">
+     <normaloff>:/QTreeWidgetDemo/Resources/OOFL.ICO</normaloff>:/QTreeWidgetDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="QTreeWidgetDemo.qrc"/>
+  <include location="QTreeWidgetDemo.qrc"/>
  </resources>
- <connections/>
-</UI>
+ <connections>
+  <connection>
+   <sender>actQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>QTreeWidgetDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>407</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
