@@ -32,8 +32,17 @@
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QLabel" name="label">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
           <property name="text">
            <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -97,86 +106,19 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QTreeWidget" name="treeWidget">
+       <attribute name="headerVisible">
+        <bool>true</bool>
+       </attribute>
        <column>
         <property name="text">
-         <string>图片文件</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normalon>:/QTreeWidgetDemo/Resources/MYSL.ICO</normalon>
-         </iconset>
+         <string>节点</string>
         </property>
        </column>
-       <item>
+       <column>
         <property name="text">
-         <string>目录1</string>
+         <string>类型</string>
         </property>
-        <property name="icon">
-         <iconset>
-          <normalon>:/QTreeWidgetDemo/Resources/FOLDER.ICO</normalon>
-         </iconset>
-        </property>
-        <item>
-         <property name="text">
-          <string>文件1</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
-          </iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>文件2</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
-          </iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>文件3</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
-          </iconset>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>目录2</string>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normalon>:/QTreeWidgetDemo/Resources/FOLDER.ICO</normalon>
-         </iconset>
-        </property>
-        <item>
-         <property name="text">
-          <string>文件4</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
-          </iconset>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>文件5</string>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normalon>:/QTreeWidgetDemo/Resources/POSTITL.ICO</normalon>
-          </iconset>
-         </property>
-        </item>
-       </item>
+       </column>
       </widget>
      </item>
     </layout>

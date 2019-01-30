@@ -139,6 +139,9 @@ public:
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         label = new QLabel(scrollAreaWidgetContents);
         label->setObjectName(QStringLiteral("label"));
+        label->setFrameShape(QFrame::NoFrame);
+        label->setScaledContents(false);
+        label->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_3->addWidget(label);
 
@@ -169,30 +172,8 @@ public:
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         treeWidget = new QTreeWidget(dockWidgetContents);
-        QIcon icon12;
-        icon12.addFile(QStringLiteral(":/QTreeWidgetDemo/Resources/MYSL.ICO"), QSize(), QIcon::Normal, QIcon::On);
-        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
-        __qtreewidgetitem->setIcon(0, icon12);
-        treeWidget->setHeaderItem(__qtreewidgetitem);
-        QIcon icon13;
-        icon13.addFile(QStringLiteral(":/QTreeWidgetDemo/Resources/FOLDER.ICO"), QSize(), QIcon::Normal, QIcon::On);
-        QIcon icon14;
-        icon14.addFile(QStringLiteral(":/QTreeWidgetDemo/Resources/POSTITL.ICO"), QSize(), QIcon::Normal, QIcon::On);
-        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(treeWidget);
-        __qtreewidgetitem1->setIcon(0, icon13);
-        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem(__qtreewidgetitem1);
-        __qtreewidgetitem2->setIcon(0, icon14);
-        QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem(__qtreewidgetitem1);
-        __qtreewidgetitem3->setIcon(0, icon14);
-        QTreeWidgetItem *__qtreewidgetitem4 = new QTreeWidgetItem(__qtreewidgetitem1);
-        __qtreewidgetitem4->setIcon(0, icon14);
-        QTreeWidgetItem *__qtreewidgetitem5 = new QTreeWidgetItem(treeWidget);
-        __qtreewidgetitem5->setIcon(0, icon13);
-        QTreeWidgetItem *__qtreewidgetitem6 = new QTreeWidgetItem(__qtreewidgetitem5);
-        __qtreewidgetitem6->setIcon(0, icon14);
-        QTreeWidgetItem *__qtreewidgetitem7 = new QTreeWidgetItem(__qtreewidgetitem5);
-        __qtreewidgetitem7->setIcon(0, icon14);
         treeWidget->setObjectName(QStringLiteral("treeWidget"));
+        treeWidget->header()->setVisible(true);
 
         horizontalLayout_2->addWidget(treeWidget);
 
@@ -275,26 +256,8 @@ public:
         label->setText(QString());
         dockWidget->setWindowTitle(QApplication::translate("QTreeWidgetDemoClass", "\345\233\276\347\211\207\347\233\256\345\275\225\346\240\221", Q_NULLPTR));
         QTreeWidgetItem *___qtreewidgetitem = treeWidget->headerItem();
-        ___qtreewidgetitem->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\345\233\276\347\211\207\346\226\207\344\273\266", Q_NULLPTR));
-
-        const bool __sortingEnabled = treeWidget->isSortingEnabled();
-        treeWidget->setSortingEnabled(false);
-        QTreeWidgetItem *___qtreewidgetitem1 = treeWidget->topLevelItem(0);
-        ___qtreewidgetitem1->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\347\233\256\345\275\2251", Q_NULLPTR));
-        QTreeWidgetItem *___qtreewidgetitem2 = ___qtreewidgetitem1->child(0);
-        ___qtreewidgetitem2->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\346\226\207\344\273\2661", Q_NULLPTR));
-        QTreeWidgetItem *___qtreewidgetitem3 = ___qtreewidgetitem1->child(1);
-        ___qtreewidgetitem3->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\346\226\207\344\273\2662", Q_NULLPTR));
-        QTreeWidgetItem *___qtreewidgetitem4 = ___qtreewidgetitem1->child(2);
-        ___qtreewidgetitem4->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\346\226\207\344\273\2663", Q_NULLPTR));
-        QTreeWidgetItem *___qtreewidgetitem5 = treeWidget->topLevelItem(1);
-        ___qtreewidgetitem5->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\347\233\256\345\275\2252", Q_NULLPTR));
-        QTreeWidgetItem *___qtreewidgetitem6 = ___qtreewidgetitem5->child(0);
-        ___qtreewidgetitem6->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\346\226\207\344\273\2664", Q_NULLPTR));
-        QTreeWidgetItem *___qtreewidgetitem7 = ___qtreewidgetitem5->child(1);
-        ___qtreewidgetitem7->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\346\226\207\344\273\2665", Q_NULLPTR));
-        treeWidget->setSortingEnabled(__sortingEnabled);
-
+        ___qtreewidgetitem->setText(1, QApplication::translate("QTreeWidgetDemoClass", "\347\261\273\345\236\213", Q_NULLPTR));
+        ___qtreewidgetitem->setText(0, QApplication::translate("QTreeWidgetDemoClass", "\350\212\202\347\202\271", Q_NULLPTR));
     } // retranslateUi
 
 };
