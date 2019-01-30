@@ -29,12 +29,12 @@
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{4e44fac5-d3a9-4eb5-8b0f-b82dd862c3b8}</UniqueIdentifier>
+      <UniqueIdentifier>{73a4db97-5c43-4ffc-8919-8f9887a07d47}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
     <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{058da6a0-d7bc-48ce-8214-f22f22639f45}</UniqueIdentifier>
+      <UniqueIdentifier>{18902735-3796-4324-8a7c-0a8b1c0c1199}</UniqueIdentifier>
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
@@ -43,37 +43,37 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QListWidgetDemo.cpp">
+    <ClCompile Include="QTreeWidgetDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Debug\moc_QListWidgetDemo.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_QTreeWidgetDemo.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_QListWidgetDemo.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_QTreeWidgetDemo.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_QListWidgetDemo.cpp">
+    <ClCompile Include="GeneratedFiles\qrc_QTreeWidgetDemo.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_QListWidgetDemo.h">
+    <QtMoc Include="QTreeWidgetDemo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_QTreeWidgetDemo.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="QListWidgetDemo.ui">
+    <QtUic Include="QTreeWidgetDemo.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="QListWidgetDemo.qrc">
+    <QtRcc Include="QTreeWidgetDemo.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="QListWidgetDemo.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
   </ItemGroup>
 </Project>
