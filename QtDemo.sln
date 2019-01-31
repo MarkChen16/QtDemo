@@ -33,7 +33,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.5.3QPlainTextEditDemo", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.6.1QListWidgetDemo", "QListWidgetDemo\QListWidgetDemo.vcxproj", "{6334E6AE-AB92-4040-9534-52330E41199A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QTreeWidgetDemo", "QTreeWidgetDemo\QTreeWidgetDemo.vcxproj", "{F2CDF299-8D2A-4AB8-A3AC-583A291E6008}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.7.1QTreeWidgetDemo", "QTreeWidgetDemo\QTreeWidgetDemo.vcxproj", "{F2CDF299-8D2A-4AB8-A3AC-583A291E6008}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.8.1QTableWidgetDemo", "QTableWidgetDemo\QTableWidgetDemo.vcxproj", "{9788AF79-AEE4-4241-9882-900E6C52F386}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{F2CDF299-8D2A-4AB8-A3AC-583A291E6008}.Debug|x86.Build.0 = Debug|Win32
 		{F2CDF299-8D2A-4AB8-A3AC-583A291E6008}.Release|x86.ActiveCfg = Release|Win32
 		{F2CDF299-8D2A-4AB8-A3AC-583A291E6008}.Release|x86.Build.0 = Release|Win32
+		{9788AF79-AEE4-4241-9882-900E6C52F386}.Debug|x86.ActiveCfg = Debug|Win32
+		{9788AF79-AEE4-4241-9882-900E6C52F386}.Debug|x86.Build.0 = Debug|Win32
+		{9788AF79-AEE4-4241-9882-900E6C52F386}.Release|x86.ActiveCfg = Release|Win32
+		{9788AF79-AEE4-4241-9882-900E6C52F386}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
