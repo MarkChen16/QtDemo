@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.3.1QStringListModelDemo",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.4.1QStandardItemModelDemo", "QStandardItemModelDemo\QStandardItemModelDemo.vcxproj", "{8AB6B934-46E5-408C-B814-7117FA20EC27}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.1.1StandardDialogDemo", "StandardDialogDemo\StandardDialogDemo.vcxproj", "{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -129,6 +131,10 @@ Global
 		{8AB6B934-46E5-408C-B814-7117FA20EC27}.Debug|x86.Build.0 = Debug|Win32
 		{8AB6B934-46E5-408C-B814-7117FA20EC27}.Release|x86.ActiveCfg = Release|Win32
 		{8AB6B934-46E5-408C-B814-7117FA20EC27}.Release|x86.Build.0 = Release|Win32
+		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Debug|x86.ActiveCfg = Debug|Win32
+		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Debug|x86.Build.0 = Debug|Win32
+		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Release|x86.ActiveCfg = Release|Win32
+		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,14 @@
 #include <qfiledialog.h>
 #include <qtextstream.h>
 
+/*
+Model、View、Delegate、Index的用法
+Model：数据源、操作数据
+View：显示数据
+Delegate：编辑数据
+Index：数据索引
+*/
+
 QStandardItemModelDemo::QStandardItemModelDemo(QWidget *parent)
 	: QMainWindow(parent)
 {
