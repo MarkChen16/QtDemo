@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.4.1QStandardItemModelDemo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.1.1StandardDialogDemo", "StandardDialogDemo\StandardDialogDemo.vcxproj", "{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.2.1CustomDialogDemo", "CustomDialogDemo\CustomDialogDemo.vcxproj", "{37301F00-34CC-443B-91E3-E3BF23DE63A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -135,6 +137,10 @@ Global
 		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Debug|x86.Build.0 = Debug|Win32
 		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Release|x86.ActiveCfg = Release|Win32
 		{7A8FB3EB-7BFD-49F6-99E0-0D449DDE8C54}.Release|x86.Build.0 = Release|Win32
+		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Debug|x86.ActiveCfg = Debug|Win32
+		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Debug|x86.Build.0 = Debug|Win32
+		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Release|x86.ActiveCfg = Release|Win32
+		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
