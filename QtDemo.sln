@@ -51,7 +51,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.3.3MuliWindowDemo", "Muli
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.4.1MDIWindowDemo", "MDIWindowDemo\MDIWindowDemo.vcxproj", "{6A67A541-3E46-4A8E-A116-0870C71955B7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextFileDemo", "TextFileDemo\TextFileDemo.vcxproj", "{411DC7ED-16D4-4E2D-9FBE-1951E387391B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7.1.3TextFileDemo", "TextFileDemo\TextFileDemo.vcxproj", "{411DC7ED-16D4-4E2D-9FBE-1951E387391B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryFileDemo", "BinaryFileDemo\BinaryFileDemo.vcxproj", "{5881D98F-0103-44E9-8E9B-C10E2126368A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{411DC7ED-16D4-4E2D-9FBE-1951E387391B}.Debug|x86.Build.0 = Debug|Win32
 		{411DC7ED-16D4-4E2D-9FBE-1951E387391B}.Release|x86.ActiveCfg = Release|Win32
 		{411DC7ED-16D4-4E2D-9FBE-1951E387391B}.Release|x86.Build.0 = Release|Win32
+		{5881D98F-0103-44E9-8E9B-C10E2126368A}.Debug|x86.ActiveCfg = Debug|Win32
+		{5881D98F-0103-44E9-8E9B-C10E2126368A}.Debug|x86.Build.0 = Debug|Win32
+		{5881D98F-0103-44E9-8E9B-C10E2126368A}.Release|x86.ActiveCfg = Release|Win32
+		{5881D98F-0103-44E9-8E9B-C10E2126368A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

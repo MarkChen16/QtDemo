@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BinaryFileDemoClass</class>
+ <widget class="QMainWindow" name="BinaryFileDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BinaryFileDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>781</width>
+      <height>301</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>820</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpenSTM"/>
+   <addaction name="actionSaveSTM"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpenDAT"/>
+   <addaction name="actionSaveDAT"/>
+   <addaction name="separator"/>
+   <addaction name="actionAddRow"/>
+   <addaction name="actionInsertRow"/>
+   <addaction name="actionDelRow"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpenSTM">
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/ACTIVITL.ICO</normaloff>:/BinaryFileDemo/Resources/ACTIVITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>打开STM文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开STM文件</string>
+   </property>
+  </action>
+  <action name="actionSaveSTM">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/APPTL.ICO</normaloff>:/BinaryFileDemo/Resources/APPTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>保存STM文件</string>
+   </property>
+   <property name="toolTip">
+    <string>保存STM文件</string>
+   </property>
+  </action>
+  <action name="actionOpenDAT">
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/CONTACTL.ICO</normaloff>:/BinaryFileDemo/Resources/CONTACTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>打开DAT文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开DAT文件</string>
+   </property>
+  </action>
+  <action name="actionSaveDAT">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/EXITEML.ICO</normaloff>:/BinaryFileDemo/Resources/EXITEML.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>保存DAT文件</string>
+   </property>
+   <property name="toolTip">
+    <string>保存DAT文件</string>
+   </property>
+  </action>
+  <action name="actionAddRow">
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/POSTITL.ICO</normaloff>:/BinaryFileDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>添加行</string>
+   </property>
+   <property name="toolTip">
+    <string>添加行</string>
+   </property>
+  </action>
+  <action name="actionInsertRow">
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/RSSITEML.ICO</normaloff>:/BinaryFileDemo/Resources/RSSITEML.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>插入行</string>
+   </property>
+   <property name="toolTip">
+    <string>插入行</string>
+   </property>
+  </action>
+  <action name="actionDelRow">
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/CNFNOT.ICO</normaloff>:/BinaryFileDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>删除行</string>
+   </property>
+   <property name="toolTip">
+    <string>删除行</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="BinaryFileDemo.qrc">
+     <normaloff>:/BinaryFileDemo/Resources/OOFL.ICO</normaloff>:/BinaryFileDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+   <property name="toolTip">
+    <string>退出程序</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="BinaryFileDemo.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>BinaryFileDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>409</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
