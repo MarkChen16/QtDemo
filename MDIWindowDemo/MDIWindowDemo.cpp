@@ -34,8 +34,8 @@ void MDIWindowDemo::on_actionNew_triggered()
 
 void MDIWindowDemo::on_actionOpen_triggered()
 {
-	QString strFile = QFileDialog::getOpenFileName(this, "打开一个文件", 
-		QCoreApplication::applicationDirPath(), "Text File(*.txt, *.doc)||All File(*.*)");
+	QString strFile = QFileDialog::getOpenFileName(this, "打开一个文件",
+		QCoreApplication::applicationDirPath(), "Text File(*.txt, *.doc);;All File(*.*)");
 
 	if (strFile.isEmpty()) return;
 

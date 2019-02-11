@@ -131,7 +131,7 @@ void QStandardItemModelDemo::on_actOpenFile_triggered()
 void QStandardItemModelDemo::on_actSaveAs_triggered()
 {
 	QString strFile = QFileDialog::getSaveFileName(this, "选择一个文本文件：",
-		QCoreApplication::applicationDirPath(), "Text File(*.txt);All File(*.*)");
+		QCoreApplication::applicationDirPath(), "Text File(*.txt);;All File(*.*)");
 
 	if (strFile.isEmpty()) return;
 
