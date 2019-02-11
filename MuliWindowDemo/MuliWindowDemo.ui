@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MuliWindowDemoClass</class>
+ <widget class="QMainWindow" name="MuliWindowDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>332</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MuliWindowDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>571</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actEmbedWidget"/>
+   <addaction name="actStandWidget"/>
+   <addaction name="separator"/>
+   <addaction name="actEmbedMainWindow"/>
+   <addaction name="actStandMainWindow"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actEmbedWidget">
+   <property name="icon">
+    <iconset resource="MuliWindowDemo.qrc">
+     <normaloff>:/MuliWindowDemo/Resources/IPML.ICO</normaloff>:/MuliWindowDemo/Resources/IPML.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>嵌入式Widget</string>
+   </property>
+   <property name="toolTip">
+    <string>嵌入式Widget</string>
+   </property>
+  </action>
+  <action name="actStandWidget">
+   <property name="icon">
+    <iconset resource="MuliWindowDemo.qrc">
+     <normaloff>:/MuliWindowDemo/Resources/APPTL.ICO</normaloff>:/MuliWindowDemo/Resources/APPTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>独立Widget窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>独立Widget窗口</string>
+   </property>
+  </action>
+  <action name="actEmbedMainWindow">
+   <property name="icon">
+    <iconset resource="MuliWindowDemo.qrc">
+     <normaloff>:/MuliWindowDemo/Resources/FOLDER.ICO</normaloff>:/MuliWindowDemo/Resources/FOLDER.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>嵌入MainWindow</string>
+   </property>
+   <property name="toolTip">
+    <string>嵌入MainWindow</string>
+   </property>
+  </action>
+  <action name="actStandMainWindow">
+   <property name="icon">
+    <iconset resource="MuliWindowDemo.qrc">
+     <normaloff>:/MuliWindowDemo/Resources/MYSL.ICO</normaloff>:/MuliWindowDemo/Resources/MYSL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>独立MainWindow窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>独立MainWindow窗口</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="MuliWindowDemo.qrc">
+     <normaloff>:/MuliWindowDemo/Resources/OOFL.ICO</normaloff>:/MuliWindowDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MuliWindowDemo.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MuliWindowDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -39,7 +39,7 @@ private:
 	void keyReleaseEvent(QKeyEvent *event);
 
 	/*
-	//QWidget中全部的事件函数定义
+	//QWidget中全部的事件函数定义：
 	virtual void mousePressEvent(QMouseEvent *event);
 	virtual void mouseReleaseEvent(QMouseEvent *event);
 	virtual void mouseDoubleClickEvent(QMouseEvent *event);

@@ -47,6 +47,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.1.1StandardDialogDemo", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.2.1CustomDialogDemo", "CustomDialogDemo\CustomDialogDemo.vcxproj", "{37301F00-34CC-443B-91E3-E3BF23DE63A7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.3.3MuliWindowDemo", "MuliWindowDemo\MuliWindowDemo.vcxproj", "{C03416D3-E65C-4A60-AD61-76EB24CA86DD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.4.1MDIWindowDemo", "MDIWindowDemo\MDIWindowDemo.vcxproj", "{6A67A541-3E46-4A8E-A116-0870C71955B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -141,6 +145,14 @@ Global
 		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Debug|x86.Build.0 = Debug|Win32
 		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Release|x86.ActiveCfg = Release|Win32
 		{37301F00-34CC-443B-91E3-E3BF23DE63A7}.Release|x86.Build.0 = Release|Win32
+		{C03416D3-E65C-4A60-AD61-76EB24CA86DD}.Debug|x86.ActiveCfg = Debug|Win32
+		{C03416D3-E65C-4A60-AD61-76EB24CA86DD}.Debug|x86.Build.0 = Debug|Win32
+		{C03416D3-E65C-4A60-AD61-76EB24CA86DD}.Release|x86.ActiveCfg = Release|Win32
+		{C03416D3-E65C-4A60-AD61-76EB24CA86DD}.Release|x86.Build.0 = Release|Win32
+		{6A67A541-3E46-4A8E-A116-0870C71955B7}.Debug|x86.ActiveCfg = Debug|Win32
+		{6A67A541-3E46-4A8E-A116-0870C71955B7}.Debug|x86.Build.0 = Debug|Win32
+		{6A67A541-3E46-4A8E-A116-0870C71955B7}.Release|x86.ActiveCfg = Release|Win32
+		{6A67A541-3E46-4A8E-A116-0870C71955B7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

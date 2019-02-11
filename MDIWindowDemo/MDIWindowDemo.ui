@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MDIWindowDemoClass</class>
+ <widget class="QMainWindow" name="MDIWindowDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>678</width>
+    <height>427</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MDIWindowDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>678</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionCloseAll"/>
+   <addaction name="separator"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionClear"/>
+   <addaction name="separator"/>
+   <addaction name="actionMDIMode"/>
+   <addaction name="separator"/>
+   <addaction name="actionCascading"/>
+   <addaction name="actionTile"/>
+   <addaction name="separator"/>
+   <addaction name="actionClose"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/CONTACTL.ICO</normaloff>:/MDIWindowDemo/Resources/CONTACTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>新建...</string>
+   </property>
+   <property name="toolTip">
+    <string>新建文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/APPTL.ICO</normaloff>:/MDIWindowDemo/Resources/APPTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>打开...</string>
+   </property>
+   <property name="toolTip">
+    <string>打开文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/OOFL.ICO</normaloff>:/MDIWindowDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出程序</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/POSTL.ICO</normaloff>:/MDIWindowDemo/Resources/POSTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>剪切</string>
+   </property>
+   <property name="toolTip">
+    <string>剪切文本</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/POSTITL.ICO</normaloff>:/MDIWindowDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>复制</string>
+   </property>
+   <property name="toolTip">
+    <string>复制文本</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/RSSITEML.ICO</normaloff>:/MDIWindowDemo/Resources/RSSITEML.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+   <property name="toolTip">
+    <string>粘贴文本</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/CNFNOT.ICO</normaloff>:/MDIWindowDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+   <property name="toolTip">
+    <string>清空文本</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionMDIMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/TASKREQL.ICO</normaloff>:/MDIWindowDemo/Resources/TASKREQL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>MDI模式</string>
+   </property>
+   <property name="toolTip">
+    <string>MDI模式</string>
+   </property>
+  </action>
+  <action name="actionCascading">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/RESENDL.ICO</normaloff>:/MDIWindowDemo/Resources/RESENDL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>级联展开</string>
+   </property>
+   <property name="toolTip">
+    <string>级联展开</string>
+   </property>
+  </action>
+  <action name="actionTile">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/ACTIVITL.ICO</normaloff>:/MDIWindowDemo/Resources/ACTIVITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>平铺展开</string>
+   </property>
+   <property name="toolTip">
+    <string>平铺展开</string>
+   </property>
+  </action>
+  <action name="actionCloseAll">
+   <property name="icon">
+    <iconset resource="MDIWindowDemo.qrc">
+     <normaloff>:/MDIWindowDemo/Resources/FOLDER.ICO</normaloff>:/MDIWindowDemo/Resources/FOLDER.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>全部关闭</string>
+   </property>
+   <property name="toolTip">
+    <string>全部关闭</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MDIWindowDemo.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionClose</sender>
+   <signal>triggered()</signal>
+   <receiver>MDIWindowDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCloseAll</sender>
+   <signal>triggered()</signal>
+   <receiver>mdiArea</receiver>
+   <slot>closeAllSubWindows()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
