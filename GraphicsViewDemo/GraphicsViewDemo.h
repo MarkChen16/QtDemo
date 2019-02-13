@@ -1,27 +1,62 @@
-#pragma once
+ï»¿#pragma once
 
 #include <QtWidgets/QMainWindow>
 #include "ui_GraphicsViewDemo.h"
 
 #include <qlabel.h>
 
+#include <qcolordialog.h>
+#include <qfontdialog.h>
+
+#pragma execution_character_set("UTF-8")
+
 class GraphicsViewDemo : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	static const int ItemId = 1;		//ÓÃÓÚ×Ô¶¨ÒåÊı¾İ±àºÅµÄkey
-	static const int ItemType = 2;		//ÓÃÓÚ×Ô¶¨ÒåÊı¾İÀàĞÍµÄkey
+	static const int ItemId = 1;		//ç”¨äºè‡ªå®šä¹‰æ•°æ®ç¼–å·çš„key
+	static const int ItemType = 2;		//ç”¨äºè‡ªå®šä¹‰æ•°æ®ç±»å‹çš„key
 
-	int seqNum = 0;	//Í¼ĞÎÏîµÄ±àºÅ
-	int frontZ = 0;	//Ç°ÃæµÄµş·ÅË³Ğò
-	int backZ = 0;	//ºóÃæµÄµş·ÅË³Ğò
+	int seqNum = 0;	//å›¾å½¢é¡¹çš„ç¼–å·
+	int frontZ = 0;	//å‰é¢çš„å æ”¾é¡ºåº
+	int backZ = 0;	//åé¢çš„å æ”¾é¡ºåº
 
 	GraphicsViewDemo(QWidget *parent = Q_NULLPTR);
 
 	void initGraphicsView();
 
 	void clearChecked();
+
+	template<class T>
+	void SetBrushColor(QGraphicsItem *item)
+	{
+		T* currItem = static_cast<T *>(item);
+		if (currItem == NULL) return;
+
+		QBrush brush = currItem->brush();
+		QColor color = QColorDialog::getColor(brush.color(), this, "è¯·é€‰æ‹©ä¸€ä¸ªé¢œè‰²");
+		if (color.isValid())
+		{
+			brush.setColor(color);
+			currItem->setBrush(brush);
+		}
+	}
+
+	template<class T>
+	void SetPenColor(QGraphicsItem *item)
+	{
+		T* currItem = static_cast<T *>(item);
+		if (currItem == NULL) return;
+
+		QPen pen = currItem->pen();
+		QColor color = QColorDialog::getColor(pen.color(), this, "è¯·é€‰æ‹©ä¸€ä¸ªé¢œè‰²");
+		if (color.isValid())
+		{
+			pen.setColor(color);
+			currItem->setPen(pen);
+		}
+	}
 
 	private slots:
 	void on_graphicsView_itemSelect(QPoint point);

@@ -70,7 +70,7 @@ GraphicsViewDemo::GraphicsViewDemo(QWidget *parent)
 
 void GraphicsViewDemo::initGraphicsView()
 {
-	theScene = new QGraphicsScene(-300, -200, 600, 200);
+	theScene = new QGraphicsScene(-300, -200, 600, 400);
 
 	ui.graphicsView->setScene(theScene);		//关联Scene场景
 	ui.graphicsView->setCursor(Qt::CrossCursor);	//设置光标
@@ -295,7 +295,40 @@ void GraphicsViewDemo::on_graphicsView_itemMove(QPoint point)
 
 void GraphicsViewDemo::on_graphicsView_itemOption(QPoint point)
 {
-	
+	int cnt = theScene->selectedItems().count();
+	if (cnt == 1)
+	{
+		QGraphicsItem *item = theScene->selectedItems().at(0);
+
+		QString strType = item->data(ItemType).toString();
+		if ("矩形" == strType)
+		{
+			SetBrushColor<QGraphicsRectItem>(item);
+		}
+		else if ("椭圆" == strType || "圆形" == strType)
+		{
+			SetBrushColor<QGraphicsEllipseItem>(item);
+		}
+		else if ("三角" == strType || "梯形" == strType)
+		{
+			SetBrushColor<QGraphicsPolygonItem>(item);
+		}
+		else if ("直线" == strType)
+		{
+			SetPenColor<QGraphicsLineItem>(item);
+		}
+		else if ("文字" == strType)
+		{
+			QGraphicsTextItem *currItem = (QGraphicsTextItem *)item;
+
+			bool bOk = false;
+			QFont font = QFontDialog::getFont(&bOk, currItem->font(), this, "请选择一个字体");
+			if (bOk)
+			{
+				currItem->setFont(font);
+			}
+		}
+	}
 }
 
 void GraphicsViewDemo::on_graphicsView_itemShortcut(QKeyEvent * e)

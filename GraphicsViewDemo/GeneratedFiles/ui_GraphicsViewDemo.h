@@ -146,7 +146,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         graphicsView = new QWGraphicsView(centralWidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(170, 20, 441, 291));
+        graphicsView->setGeometry(QRect(140, 70, 441, 291));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         graphicsView->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
@@ -170,10 +170,9 @@ public:
 
         mainToolBar->addAction(actEnlarge);
         mainToolBar->addAction(actLessen);
-        mainToolBar->addAction(actGoBack);
-        mainToolBar->addSeparator();
         mainToolBar->addAction(actLeftTrans);
         mainToolBar->addAction(actRightTrans);
+        mainToolBar->addAction(actGoBack);
         mainToolBar->addSeparator();
         mainToolBar->addAction(actGoFront);
         mainToolBar->addAction(actGoBottom);
