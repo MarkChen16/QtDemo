@@ -6,37 +6,309 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>363</height>
+    <width>787</width>
+    <height>514</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>GraphicsViewDemo</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>20</y>
+      <width>441</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustIgnored</enum>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>807</width>
+     <width>787</width>
      <height>23</height>
     </rect>
    </property>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actEnlarge"/>
+   <addaction name="actLessen"/>
+   <addaction name="actGoBack"/>
+   <addaction name="separator"/>
+   <addaction name="actLeftTrans"/>
+   <addaction name="actRightTrans"/>
+   <addaction name="separator"/>
+   <addaction name="actGoFront"/>
+   <addaction name="actGoBottom"/>
+   <addaction name="separator"/>
+   <addaction name="actGroup"/>
+   <addaction name="actNoGroup"/>
+   <addaction name="actDel"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actRect"/>
+   <addaction name="actEllipse1"/>
+   <addaction name="actEllipse2"/>
+   <addaction name="actPolygon1"/>
+   <addaction name="actPolygon2"/>
+   <addaction name="actLine"/>
+   <addaction name="actText"/>
+  </widget>
+  <action name="actEnlarge">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/ACTIVITL.ICO</normaloff>:/GraphicsViewDemo/Resources/ACTIVITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="actLessen">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/EXITEML.ICO</normaloff>:/GraphicsViewDemo/Resources/EXITEML.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="actGoBack">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/CONTACTL.ICO</normaloff>:/GraphicsViewDemo/Resources/CONTACTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>恢复</string>
+   </property>
+  </action>
+  <action name="actLeftTrans">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/REFBAR.ICO</normaloff>:/GraphicsViewDemo/Resources/REFBAR.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>左旋转</string>
+   </property>
+  </action>
+  <action name="actRightTrans">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/MYSL.ICO</normaloff>:/GraphicsViewDemo/Resources/MYSL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>右旋转</string>
+   </property>
+  </action>
+  <action name="actGoFront">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/NOTEL.ICO</normaloff>:/GraphicsViewDemo/Resources/NOTEL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>前置</string>
+   </property>
+  </action>
+  <action name="actGoBottom">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/SCDREQL.ICO</normaloff>:/GraphicsViewDemo/Resources/SCDREQL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>后置</string>
+   </property>
+  </action>
+  <action name="actGroup">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/APPTL.ICO</normaloff>:/GraphicsViewDemo/Resources/APPTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>组合</string>
+   </property>
+  </action>
+  <action name="actNoGroup">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/POSTITL.ICO</normaloff>:/GraphicsViewDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>打散</string>
+   </property>
+  </action>
+  <action name="actDel">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/CNFNOT.ICO</normaloff>:/GraphicsViewDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>删除</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/OOFL.ICO</normaloff>:/GraphicsViewDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actRect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="actEllipse1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>椭圆</string>
+   </property>
+  </action>
+  <action name="actEllipse2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>圆形</string>
+   </property>
+  </action>
+  <action name="actPolygon1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>三角</string>
+   </property>
+  </action>
+  <action name="actPolygon2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>梯形</string>
+   </property>
+  </action>
+  <action name="actLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>直线</string>
+   </property>
+  </action>
+  <action name="actText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="GraphicsViewDemo.qrc">
+     <normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</normaloff>:/GraphicsViewDemo/Resources/TASKL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>文字</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qwgraphicsview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="GraphicsViewDemo.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>GraphicsViewDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>393</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

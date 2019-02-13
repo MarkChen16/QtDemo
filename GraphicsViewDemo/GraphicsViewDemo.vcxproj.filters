@@ -55,11 +55,15 @@
     <ClCompile Include="GeneratedFiles\qrc_GraphicsViewDemo.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="GraphicsViewDemo.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
+    <ClCompile Include="QWGraphicsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QWGraphicsView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QWGraphicsView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_GraphicsViewDemo.h">
@@ -75,5 +79,13 @@
     <QtRcc Include="GraphicsViewDemo.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="GraphicsViewDemo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QWGraphicsView.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
