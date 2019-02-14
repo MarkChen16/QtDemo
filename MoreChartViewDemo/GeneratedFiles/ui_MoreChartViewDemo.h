@@ -9,11 +9,11 @@
 #ifndef UI_MORECHARTVIEWDEMO_H
 #define UI_MORECHARTVIEWDEMO_H
 
+#include <QtCharts>
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -24,7 +24,7 @@
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QTreeView>
+#include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -41,8 +41,8 @@ public:
     QSplitter *splitter;
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout;
-    QTableView *tableView;
-    QTreeView *treeView;
+    QTableView *viewData;
+    QTreeWidget *treeWidget;
     QGroupBox *groupBox_2;
     QVBoxLayout *verticalLayout_2;
     QTabWidget *tabWidget;
@@ -50,16 +50,37 @@ public:
     QVBoxLayout *verticalLayout_4;
     QGroupBox *groupBox_3;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton;
+    QPushButton *btnReloadBarChart;
     QSpacerItem *horizontalSpacer;
-    QGraphicsView *graphicsView;
+    QChartView *viewBar;
     QWidget *tab_3;
     QVBoxLayout *verticalLayout_5;
     QGroupBox *groupBox_4;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pushButton_2;
+    QPushButton *btnReloadPieChart;
     QSpacerItem *horizontalSpacer_2;
-    QGraphicsView *graphicsView_2;
+    QChartView *viewPie;
+    QWidget *tab_2;
+    QVBoxLayout *verticalLayout_6;
+    QGroupBox *groupBox_5;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *btnReloadStackedBarChart;
+    QSpacerItem *horizontalSpacer_3;
+    QChartView *viewStackedBar;
+    QWidget *tab_4;
+    QVBoxLayout *verticalLayout_7;
+    QGroupBox *groupBox_6;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *btnReloadPercentBarChart;
+    QSpacerItem *horizontalSpacer_4;
+    QChartView *viewPercentBar;
+    QWidget *tab_5;
+    QVBoxLayout *verticalLayout_8;
+    QGroupBox *groupBox_7;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *btnReloadScatterChart;
+    QSpacerItem *horizontalSpacer_5;
+    QChartView *viewScatterChart;
     QToolBar *mainToolBar;
 
     void setupUi(QMainWindow *MoreChartViewDemoClass)
@@ -97,15 +118,15 @@ public:
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        tableView = new QTableView(groupBox);
-        tableView->setObjectName(QStringLiteral("tableView"));
+        viewData = new QTableView(groupBox);
+        viewData->setObjectName(QStringLiteral("viewData"));
 
-        verticalLayout->addWidget(tableView);
+        verticalLayout->addWidget(viewData);
 
-        treeView = new QTreeView(groupBox);
-        treeView->setObjectName(QStringLiteral("treeView"));
+        treeWidget = new QTreeWidget(groupBox);
+        treeWidget->setObjectName(QStringLiteral("treeWidget"));
 
-        verticalLayout->addWidget(treeView);
+        verticalLayout->addWidget(treeWidget);
 
         splitter->addWidget(groupBox);
         groupBox_2 = new QGroupBox(splitter);
@@ -135,10 +156,10 @@ public:
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        pushButton = new QPushButton(groupBox_3);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        btnReloadBarChart = new QPushButton(groupBox_3);
+        btnReloadBarChart->setObjectName(QStringLiteral("btnReloadBarChart"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(btnReloadBarChart);
 
         horizontalSpacer = new QSpacerItem(284, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -147,10 +168,10 @@ public:
 
         verticalLayout_4->addWidget(groupBox_3);
 
-        graphicsView = new QGraphicsView(tab);
-        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        viewBar = new QChartView(tab);
+        viewBar->setObjectName(QStringLiteral("viewBar"));
 
-        verticalLayout_4->addWidget(graphicsView);
+        verticalLayout_4->addWidget(viewBar);
 
         tabWidget->addTab(tab, QString());
         tab_3 = new QWidget();
@@ -168,10 +189,10 @@ public:
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        pushButton_2 = new QPushButton(groupBox_4);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        btnReloadPieChart = new QPushButton(groupBox_4);
+        btnReloadPieChart->setObjectName(QStringLiteral("btnReloadPieChart"));
 
-        horizontalLayout_2->addWidget(pushButton_2);
+        horizontalLayout_2->addWidget(btnReloadPieChart);
 
         horizontalSpacer_2 = new QSpacerItem(284, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -180,12 +201,111 @@ public:
 
         verticalLayout_5->addWidget(groupBox_4);
 
-        graphicsView_2 = new QGraphicsView(tab_3);
-        graphicsView_2->setObjectName(QStringLiteral("graphicsView_2"));
+        viewPie = new QChartView(tab_3);
+        viewPie->setObjectName(QStringLiteral("viewPie"));
 
-        verticalLayout_5->addWidget(graphicsView_2);
+        verticalLayout_5->addWidget(viewPie);
 
         tabWidget->addTab(tab_3, QString());
+        tab_2 = new QWidget();
+        tab_2->setObjectName(QStringLiteral("tab_2"));
+        verticalLayout_6 = new QVBoxLayout(tab_2);
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        groupBox_5 = new QGroupBox(tab_2);
+        groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
+        sizePolicy.setHeightForWidth(groupBox_5->sizePolicy().hasHeightForWidth());
+        groupBox_5->setSizePolicy(sizePolicy);
+        groupBox_5->setMaximumSize(QSize(16777215, 16777215));
+        horizontalLayout_3 = new QHBoxLayout(groupBox_5);
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        btnReloadStackedBarChart = new QPushButton(groupBox_5);
+        btnReloadStackedBarChart->setObjectName(QStringLiteral("btnReloadStackedBarChart"));
+
+        horizontalLayout_3->addWidget(btnReloadStackedBarChart);
+
+        horizontalSpacer_3 = new QSpacerItem(284, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_3);
+
+
+        verticalLayout_6->addWidget(groupBox_5);
+
+        viewStackedBar = new QChartView(tab_2);
+        viewStackedBar->setObjectName(QStringLiteral("viewStackedBar"));
+
+        verticalLayout_6->addWidget(viewStackedBar);
+
+        tabWidget->addTab(tab_2, QString());
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
+        verticalLayout_7 = new QVBoxLayout(tab_4);
+        verticalLayout_7->setSpacing(6);
+        verticalLayout_7->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
+        groupBox_6 = new QGroupBox(tab_4);
+        groupBox_6->setObjectName(QStringLiteral("groupBox_6"));
+        sizePolicy.setHeightForWidth(groupBox_6->sizePolicy().hasHeightForWidth());
+        groupBox_6->setSizePolicy(sizePolicy);
+        groupBox_6->setMaximumSize(QSize(16777215, 16777215));
+        horizontalLayout_4 = new QHBoxLayout(groupBox_6);
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        btnReloadPercentBarChart = new QPushButton(groupBox_6);
+        btnReloadPercentBarChart->setObjectName(QStringLiteral("btnReloadPercentBarChart"));
+
+        horizontalLayout_4->addWidget(btnReloadPercentBarChart);
+
+        horizontalSpacer_4 = new QSpacerItem(284, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_4);
+
+
+        verticalLayout_7->addWidget(groupBox_6);
+
+        viewPercentBar = new QChartView(tab_4);
+        viewPercentBar->setObjectName(QStringLiteral("viewPercentBar"));
+
+        verticalLayout_7->addWidget(viewPercentBar);
+
+        tabWidget->addTab(tab_4, QString());
+        tab_5 = new QWidget();
+        tab_5->setObjectName(QStringLiteral("tab_5"));
+        verticalLayout_8 = new QVBoxLayout(tab_5);
+        verticalLayout_8->setSpacing(6);
+        verticalLayout_8->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
+        groupBox_7 = new QGroupBox(tab_5);
+        groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
+        sizePolicy.setHeightForWidth(groupBox_7->sizePolicy().hasHeightForWidth());
+        groupBox_7->setSizePolicy(sizePolicy);
+        groupBox_7->setMaximumSize(QSize(16777215, 16777215));
+        horizontalLayout_5 = new QHBoxLayout(groupBox_7);
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        btnReloadScatterChart = new QPushButton(groupBox_7);
+        btnReloadScatterChart->setObjectName(QStringLiteral("btnReloadScatterChart"));
+
+        horizontalLayout_5->addWidget(btnReloadScatterChart);
+
+        horizontalSpacer_5 = new QSpacerItem(284, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_5);
+
+
+        verticalLayout_8->addWidget(groupBox_7);
+
+        viewScatterChart = new QChartView(tab_5);
+        viewScatterChart->setObjectName(QStringLiteral("viewScatterChart"));
+
+        verticalLayout_8->addWidget(viewScatterChart);
+
+        tabWidget->addTab(tab_5, QString());
 
         verticalLayout_2->addWidget(tabWidget);
 
@@ -205,8 +325,9 @@ public:
         mainToolBar->addAction(actQuit);
 
         retranslateUi(MoreChartViewDemoClass);
+        QObject::connect(actQuit, SIGNAL(triggered()), MoreChartViewDemoClass, SLOT(close()));
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MoreChartViewDemoClass);
@@ -225,13 +346,28 @@ public:
         actQuit->setToolTip(QApplication::translate("MoreChartViewDemoClass", "\351\200\200\345\207\272\347\250\213\345\272\217", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
         groupBox->setTitle(QApplication::translate("MoreChartViewDemoClass", "\345\207\206\345\244\207\346\225\260\346\215\256", Q_NULLPTR));
+        QTreeWidgetItem *___qtreewidgetitem = treeWidget->headerItem();
+        ___qtreewidgetitem->setText(4, QApplication::translate("MoreChartViewDemoClass", "\345\271\263\345\235\207\345\210\206", Q_NULLPTR));
+        ___qtreewidgetitem->setText(3, QApplication::translate("MoreChartViewDemoClass", "\350\213\261\350\257\255", Q_NULLPTR));
+        ___qtreewidgetitem->setText(2, QApplication::translate("MoreChartViewDemoClass", "\346\225\260\345\255\246", Q_NULLPTR));
+        ___qtreewidgetitem->setText(1, QApplication::translate("MoreChartViewDemoClass", "\350\257\255\346\226\207", Q_NULLPTR));
+        ___qtreewidgetitem->setText(0, QApplication::translate("MoreChartViewDemoClass", "\345\210\206\346\225\260\346\256\265", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("MoreChartViewDemoClass", "\346\230\276\347\244\272\345\233\276\350\241\250", Q_NULLPTR));
         groupBox_3->setTitle(QString());
-        pushButton->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MoreChartViewDemoClass", "BarChart", Q_NULLPTR));
+        btnReloadBarChart->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260\345\233\276\350\241\250", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MoreChartViewDemoClass", "BarChart\346\237\261\347\212\266\345\233\276", Q_NULLPTR));
         groupBox_4->setTitle(QString());
-        pushButton_2->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MoreChartViewDemoClass", "PieChart", Q_NULLPTR));
+        btnReloadPieChart->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260\345\233\276\350\241\250", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MoreChartViewDemoClass", "PieChart\351\245\274\345\233\276", Q_NULLPTR));
+        groupBox_5->setTitle(QString());
+        btnReloadStackedBarChart->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260\345\233\276\350\241\250", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MoreChartViewDemoClass", "StackedBar\345\240\206\345\217\240\346\237\261\347\212\266\345\233\276", Q_NULLPTR));
+        groupBox_6->setTitle(QString());
+        btnReloadPercentBarChart->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260\345\233\276\350\241\250", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MoreChartViewDemoClass", "PercentBar\347\231\276\345\210\206\346\257\224\346\237\261\347\212\266\345\233\276", Q_NULLPTR));
+        groupBox_7->setTitle(QString());
+        btnReloadScatterChart->setText(QApplication::translate("MoreChartViewDemoClass", "\345\210\267\346\226\260\345\233\276\350\241\250", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("MoreChartViewDemoClass", "ScatterChart\346\225\243\347\202\271\345\233\276", Q_NULLPTR));
     } // retranslateUi
 
 };

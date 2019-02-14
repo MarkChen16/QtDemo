@@ -57,11 +57,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="MoreChartViewDemo.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_MoreChartViewDemo.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
@@ -75,5 +70,10 @@
     <QtRcc Include="MoreChartViewDemo.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MoreChartViewDemo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
