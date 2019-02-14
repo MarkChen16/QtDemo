@@ -160,7 +160,7 @@ void GraphicsViewDemo::on_graphicsView_itemSelect(QPoint point)
 		else if ("圆形" == selItemType)
 		{
 			//Item的原点在图形的中心
-			QGraphicsEllipseItem *item = new QGraphicsEllipseItem(-50, -30, 50, 30);
+			QGraphicsEllipseItem *item = new QGraphicsEllipseItem(-50, -50, 100, 100);
 
 			//设置可以选择、可以移动，有焦点
 			item->setFlags(QGraphicsItem::ItemIsFocusable |

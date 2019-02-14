@@ -13,9 +13,27 @@
   <property name="windowTitle">
    <string>ChartViewDemo</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QChartView" name="chartView">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>381</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">QtCharts</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="ChartViewDemo.qrc"/>
  </resources>

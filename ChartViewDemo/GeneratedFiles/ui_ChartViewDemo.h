@@ -9,6 +9,7 @@
 #ifndef UI_CHARTVIEWDEMO_H
 #define UI_CHARTVIEWDEMO_H
 
+#include <QtCharts>
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
@@ -23,6 +24,7 @@ class Ui_ChartViewDemoClass
 {
 public:
     QWidget *centralWidget;
+    QChartView *chartView;
 
     void setupUi(QMainWindow *ChartViewDemoClass)
     {
@@ -31,6 +33,9 @@ public:
         ChartViewDemoClass->resize(612, 325);
         centralWidget = new QWidget(ChartViewDemoClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        chartView = new QChartView(centralWidget);
+        chartView->setObjectName(QStringLiteral("chartView"));
+        chartView->setGeometry(QRect(90, 20, 381, 261));
         ChartViewDemoClass->setCentralWidget(centralWidget);
 
         retranslateUi(ChartViewDemoClass);

@@ -17,4 +17,6 @@ public:
 
 private:
 	Ui::ChartViewDemoClass ui;
+
+	QChartView *view;
 };

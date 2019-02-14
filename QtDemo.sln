@@ -61,7 +61,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.2.1PainterDemo", "Painter
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "8.3.1GraphicsViewDemo", "GraphicsViewDemo\GraphicsViewDemo.vcxproj", "{B1DC07EA-0F93-42D1-B36E-16B418BF3746}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChartViewDemo", "ChartViewDemo\ChartViewDemo.vcxproj", "{0102ECDE-3578-4B51-9519-E162D0D0147B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9.1.2ChartViewDemo", "ChartViewDemo\ChartViewDemo.vcxproj", "{0102ECDE-3578-4B51-9519-E162D0D0147B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoreChartViewDemo", "MoreChartViewDemo\MoreChartViewDemo.vcxproj", "{F43036FC-CA01-466A-93A9-B6F42ADB4516}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,10 @@ Global
 		{0102ECDE-3578-4B51-9519-E162D0D0147B}.Debug|x86.Build.0 = Debug|Win32
 		{0102ECDE-3578-4B51-9519-E162D0D0147B}.Release|x86.ActiveCfg = Release|Win32
 		{0102ECDE-3578-4B51-9519-E162D0D0147B}.Release|x86.Build.0 = Release|Win32
+		{F43036FC-CA01-466A-93A9-B6F42ADB4516}.Debug|x86.ActiveCfg = Debug|Win32
+		{F43036FC-CA01-466A-93A9-B6F42ADB4516}.Debug|x86.Build.0 = Debug|Win32
+		{F43036FC-CA01-466A-93A9-B6F42ADB4516}.Release|x86.ActiveCfg = Release|Win32
+		{F43036FC-CA01-466A-93A9-B6F42ADB4516}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
