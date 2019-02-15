@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StrengChartViewDemoClass</class>
+ <widget class="QMainWindow" name="StrengChartViewDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>356</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StrengChartViewDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWChartView" name="view">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>20</y>
+      <width>421</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actEnlarge"/>
+   <addaction name="actLessen"/>
+   <addaction name="actOrgSize"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actEnlarge">
+   <property name="icon">
+    <iconset resource="StrengChartViewDemo.qrc">
+     <normaloff>:/StrengChartViewDemo/Resources/REFBARH.ICO</normaloff>:/StrengChartViewDemo/Resources/REFBARH.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+  </action>
+  <action name="actLessen">
+   <property name="icon">
+    <iconset resource="StrengChartViewDemo.qrc">
+     <normaloff>:/StrengChartViewDemo/Resources/CNFNOT.ICO</normaloff>:/StrengChartViewDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+  </action>
+  <action name="actOrgSize">
+   <property name="icon">
+    <iconset resource="StrengChartViewDemo.qrc">
+     <normaloff>:/StrengChartViewDemo/Resources/POSTITL.ICO</normaloff>:/StrengChartViewDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>原始大小</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="StrengChartViewDemo.qrc">
+     <normaloff>:/StrengChartViewDemo/Resources/OOFL.ICO</normaloff>:/StrengChartViewDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">qwchartview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="StrengChartViewDemo.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>StrengChartViewDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
