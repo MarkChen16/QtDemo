@@ -67,7 +67,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9.3.1MoreChartViewDemo", "M
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9.4.1StrengChartViewDemo", "StrengChartViewDemo\StrengChartViewDemo.vcxproj", "{358B4B6E-9A61-41CC-B4E3-CBF64CC0EA3C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Q3DBarsDemo", "Q3DBarsDemo\Q3DBarsDemo.vcxproj", "{ACF506E3-213D-402B-9FE1-F82C9479528A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.2.1Q3DBarsDemo", "Q3DBarsDemo\Q3DBarsDemo.vcxproj", "{ACF506E3-213D-402B-9FE1-F82C9479528A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.3.1Q3DScatterDemo", "Q3DScatterDemo\Q3DScatterDemo.vcxproj", "{DEBC71B0-6033-4BFC-9FB3-36D2F3267690}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Q3DSurfaceDemo", "Q3DSurfaceDemo\Q3DSurfaceDemo.vcxproj", "{69E3A08D-E6F7-4F27-AA8A-8E88BAD58721}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +211,14 @@ Global
 		{ACF506E3-213D-402B-9FE1-F82C9479528A}.Debug|x86.Build.0 = Debug|Win32
 		{ACF506E3-213D-402B-9FE1-F82C9479528A}.Release|x86.ActiveCfg = Release|Win32
 		{ACF506E3-213D-402B-9FE1-F82C9479528A}.Release|x86.Build.0 = Release|Win32
+		{DEBC71B0-6033-4BFC-9FB3-36D2F3267690}.Debug|x86.ActiveCfg = Debug|Win32
+		{DEBC71B0-6033-4BFC-9FB3-36D2F3267690}.Debug|x86.Build.0 = Debug|Win32
+		{DEBC71B0-6033-4BFC-9FB3-36D2F3267690}.Release|x86.ActiveCfg = Release|Win32
+		{DEBC71B0-6033-4BFC-9FB3-36D2F3267690}.Release|x86.Build.0 = Release|Win32
+		{69E3A08D-E6F7-4F27-AA8A-8E88BAD58721}.Debug|x86.ActiveCfg = Debug|Win32
+		{69E3A08D-E6F7-4F27-AA8A-8E88BAD58721}.Debug|x86.Build.0 = Debug|Win32
+		{69E3A08D-E6F7-4F27-AA8A-8E88BAD58721}.Release|x86.ActiveCfg = Release|Win32
+		{69E3A08D-E6F7-4F27-AA8A-8E88BAD58721}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

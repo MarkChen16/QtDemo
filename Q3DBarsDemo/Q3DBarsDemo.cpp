@@ -4,6 +4,12 @@
 
 #include <qcolordialog.h>
 
+/*
+1、创建3DGraph图形、Series序列、(row/col/value)坐标轴，使用默认的数据代理添加数据
+2、使用图形的scene场景、Theme主题来设置显示效果
+
+*/
+
 Q3DBarsDemo::Q3DBarsDemo(QWidget *parent)
 	: QMainWindow(parent)
 {
