@@ -11,6 +11,8 @@ using namespace QtCharts;
 4、使用上、下、左和右键可以移动序列的显示位置
 
 */
+
+
 class QWChartView :
 	public QChartView
 {

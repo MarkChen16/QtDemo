@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Q3DBarsDemoClass</class>
+ <widget class="QMainWindow" name="Q3DBarsDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Q3DBarsDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>251</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>预设视角</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="cbCameraPreset">
+         <item>
+          <property name="text">
+           <string>FrontLow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Front</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FrontHigh</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LeftLow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Left</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LeftHigh</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RightLow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Right</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>RightHigh</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BehindLow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Behind</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BehindHigh</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>水平旋转</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QSlider" name="hsHorPos">
+         <property name="minimum">
+          <number>-180</number>
+         </property>
+         <property name="maximum">
+          <number>180</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>垂直旋转</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QSlider" name="hsVerPos">
+         <property name="minimum">
+          <number>-90</number>
+         </property>
+         <property name="maximum">
+          <number>90</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>缩  放</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSlider" name="hsZoom">
+         <property name="minimum">
+          <number>10</number>
+         </property>
+         <property name="maximum">
+          <number>500</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>主  题</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="cbTheme">
+         <item>
+          <property name="text">
+           <string>ThemeQt</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemePrimaryColors</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeDigia</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeStoneMoss</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeArmyBlue</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeRetro</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeEbony</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeIsabelle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ThemeUserDefined</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>棒图样式</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="cbMeshType">
+         <item>
+          <property name="text">
+           <string>MeshBar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshCube</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshPyramid</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshCone</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshCylinder</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshBevelBar</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshBevelCube</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshSphere</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshMinimal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshArrow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MeshPoint</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>选择模式</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="cbSelectMode">
+         <item>
+          <property name="text">
+           <string>SelectionNone</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionItem</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionRow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionItemAndRow</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionColumn</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionItemAndColumn</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionRowAndColumn</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionItemRowAndColumn</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionSlice</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SelectionMultiSeries</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>字体大小</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="sbFontSize">
+         <property name="value">
+          <number>40</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnItemColor">
+       <property name="text">
+        <string>项的颜色</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="cbShowBG">
+         <property name="text">
+          <string>显示背景</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="cbShowBGGrad">
+         <property name="text">
+          <string>显示背景网格</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="cbMeshSmooth">
+         <property name="text">
+          <string>光滑效果</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="cbInvImage">
+         <property name="text">
+          <string>显示倒影</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="cbAxisReverse">
+         <property name="text">
+          <string>数值坐标轴反向</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="cbShowLabel">
+         <property name="text">
+          <string>项的标签可见</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="cbAxisShowTitle">
+         <property name="text">
+          <string>坐标轴标题可见</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="cbAxisBGShowLabel">
+         <property name="text">
+          <string>坐标轴标签背景可见</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Q3DBarsDemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

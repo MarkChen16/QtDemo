@@ -5,6 +5,12 @@
 
 #include <qlabel.h>
 
+/*
+要点：
+1、移动和缩放视图
+2、单击图例(颜色块+序列名称)，显示/隐藏关联的序列
+*/
+
 class StrengChartViewDemo : public QMainWindow
 {
 	Q_OBJECT
