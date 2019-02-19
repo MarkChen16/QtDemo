@@ -36,11 +36,14 @@ void Q3DSurfaceDemo::initGraph3D()
 	surface->setAxisZ(axisZ);
 
 	//创建序列
+	//QHeightMapSurfaceDataProxy *mapProxy = new QHeightMapSurfaceDataProxy();	//也可以使用高程地图数据代理
+
 	QSurfaceDataProxy *proxy = new QSurfaceDataProxy();	//使用数据代理
 	ser = new QSurface3DSeries(proxy);
 	ser->setItemLabelFormat("(@xLabel, @yLabel @zLabel)");
 	ser->setMeshSmooth(true);
-	ser->setDrawMode(QSurface3DSeries::DrawSurfaceAndWireframe);
+	ser->setDrawMode(QSurface3DSeries::DrawSurfaceAndWireframe);	//绘制曲面和网格
+	ser->setDrawMode(QSurface3DSeries::DrawSurface);	//只绘制曲面
 	surface->activeTheme()->setLabelBackgroundEnabled(false);
 	surface->addSeries(ser);
 
