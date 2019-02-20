@@ -73,7 +73,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.3.1Q3DScatterDemo", "Q3D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.4.1Q3DSurfaceDemo", "Q3DSurfaceDemo\Q3DSurfaceDemo.vcxproj", "{69E3A08D-E6F7-4F27-AA8A-8E88BAD58721}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QSqlTableModelDemo", "QSqlTableModelDemo\QSqlTableModelDemo.vcxproj", "{B9540E03-02E3-4090-8A28-9EC0DE553D0F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11.2.1QSqlTableModelDemo", "QSqlTableModelDemo\QSqlTableModelDemo.vcxproj", "{B9540E03-02E3-4090-8A28-9EC0DE553D0F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QSqlRelationalTableDemo", "QSqlRelationalTableDemo\QSqlRelationalTableDemo.vcxproj", "{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{B9540E03-02E3-4090-8A28-9EC0DE553D0F}.Debug|x86.Build.0 = Debug|Win32
 		{B9540E03-02E3-4090-8A28-9EC0DE553D0F}.Release|x86.ActiveCfg = Release|Win32
 		{B9540E03-02E3-4090-8A28-9EC0DE553D0F}.Release|x86.Build.0 = Release|Win32
+		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Debug|x86.Build.0 = Debug|Win32
+		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Release|x86.ActiveCfg = Release|Win32
+		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

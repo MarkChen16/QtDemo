@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QSqlRelationalTableDemoClass</class>
+ <widget class="QMainWindow" name="QSqlRelationalTableDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>316</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QSqlRelationalTableDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTableView" name="tv">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>511</width>
+      <height>231</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actOpen"/>
+   <addaction name="actClose"/>
+   <addaction name="separator"/>
+   <addaction name="actInsert"/>
+   <addaction name="actDelete"/>
+   <addaction name="actSave"/>
+   <addaction name="actCancel"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <action name="actOpen">
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/MYSL.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/MYSL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>打开数据库</string>
+   </property>
+  </action>
+  <action name="actClose">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/NOTEL.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/NOTEL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>关闭数据库</string>
+   </property>
+  </action>
+  <action name="actInsert">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/POSTITL.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>插入记录</string>
+   </property>
+  </action>
+  <action name="actDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/CNFNOT.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>删除记录</string>
+   </property>
+  </action>
+  <action name="actSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/POSTL.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/POSTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>保存记录</string>
+   </property>
+  </action>
+  <action name="actCancel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/RESENDL.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/RESENDL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>取消修改</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="QSqlRelationalTableDemo.qrc">
+     <normaloff>:/QSqlRelationalTableDemo/Resources/OOFL.ICO</normaloff>:/QSqlRelationalTableDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QSqlRelationalTableDemo.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>QSqlRelationalTableDemoClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
