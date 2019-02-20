@@ -46,6 +46,7 @@ public:
     QAction *actSave;
     QAction *actCancel;
     QAction *actQuit;
+    QAction *actCutSalary;
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout;
     QSplitter *splitter_2;
@@ -155,6 +156,11 @@ public:
         QIcon icon9;
         icon9.addFile(QStringLiteral(":/QSqlTabelModelDemo/Resources/OOFL.ICO"), QSize(), QIcon::Normal, QIcon::Off);
         actQuit->setIcon(icon9);
+        actCutSalary = new QAction(QSqlTableModelDemoClass);
+        actCutSalary->setObjectName(QStringLiteral("actCutSalary"));
+        QIcon icon10;
+        icon10.addFile(QStringLiteral(":/QSqlTabelModelDemo/Resources/TASKDECL.ICO"), QSize(), QIcon::Normal, QIcon::Off);
+        actCutSalary->setIcon(icon10);
         centralWidget = new QWidget(QSqlTableModelDemoClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -336,6 +342,7 @@ public:
         mainToolBar->addAction(actSetImage);
         mainToolBar->addAction(actClearImage);
         mainToolBar->addAction(actAddSalary);
+        mainToolBar->addAction(actCutSalary);
         mainToolBar->addSeparator();
         mainToolBar->addAction(actSave);
         mainToolBar->addAction(actCancel);
@@ -361,6 +368,7 @@ public:
         actSave->setText(QApplication::translate("QSqlTableModelDemoClass", "\344\277\235\345\255\230", Q_NULLPTR));
         actCancel->setText(QApplication::translate("QSqlTableModelDemoClass", "\345\217\226\346\266\210", Q_NULLPTR));
         actQuit->setText(QApplication::translate("QSqlTableModelDemoClass", "\351\200\200\345\207\272", Q_NULLPTR));
+        actCutSalary->setText(QApplication::translate("QSqlTableModelDemoClass", "\351\231\215\345\267\245\350\265\204", Q_NULLPTR));
         groupBox->setTitle(QString());
         groupBox_5->setTitle(QString());
         groupBox_Sort->setTitle(QApplication::translate("QSqlTableModelDemoClass", "\346\216\222\345\272\217", Q_NULLPTR));

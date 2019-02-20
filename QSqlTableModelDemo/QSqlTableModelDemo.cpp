@@ -84,8 +84,8 @@ void QSqlTableModelDemo::openTable()
 	//自定义代理
 	QStringList lstSex;
 	lstSex << "男" << "女";
-	cbDelegate.SetList(lstSex);
-	ui.tv->setItemDelegateForColumn(tabModel->fieldIndex("Gender"), &cbDelegate);
+	cbDelegate.SetList(lstSex);	//初始化
+	ui.tv->setItemDelegateForColumn(tabModel->fieldIndex("Gender"), &cbDelegate);	//设置自定义代理
 
 	//初始化排序的字段列表
 	getFieldNames();
@@ -246,7 +246,7 @@ void QSqlTableModelDemo::on_actClearImage_triggered()
 
 void QSqlTableModelDemo::on_actAddSalary_triggered()
 {
-	//全部加工资%10
+	//使用遍历全部记录的方式，全部加工资%10
 	int cnt = tabModel->rowCount();
 	if (cnt <= 0) return;
 
@@ -270,6 +270,34 @@ void QSqlTableModelDemo::on_actAddSalary_triggered()
 	else
 	{
 		QMessageBox::warning(this, "警告", "提交数据库失败！");
+	}
+}
+
+void QSqlTableModelDemo::on_actCutSalary_triggered()
+{
+	//使用QSqlQuery执行SQL语句，完成降工资的特定功能
+	QSqlQuery query(DB);
+
+	//工资大于30000的员工，降工资10%用于做慈善
+	query.prepare("update employee set Salary = Salary * 0.9 where Salary >= :Money");	
+
+	//绑定参数值
+	query.bindValue(":Money", 30000);
+
+	//执行SQL语句
+	query.exec();
+
+	//返回影响的记录总数
+	if (query.isActive())
+	{
+		tabModel->select();	//重新刷新数据
+
+		QMessageBox::information(this, "提示", 
+			"成功执行降工资操作，受影响的员工有" + QString::asprintf("%d位.", query.numRowsAffected()), QMessageBox::Ok);
+	}
+	else
+	{ 
+		QMessageBox::warning(this, "警告", "执行降工资操作失败！", QMessageBox::Ok);
 	}
 }
 

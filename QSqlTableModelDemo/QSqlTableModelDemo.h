@@ -32,6 +32,7 @@ public:
 	void on_actClearImage_triggered();
 
 	void on_actAddSalary_triggered();
+	void on_actCutSalary_triggered();
 
 	void on_actSave_triggered();
 	void on_actCancel_triggered();

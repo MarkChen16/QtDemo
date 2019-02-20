@@ -711,6 +711,7 @@
    <addaction name="actSetImage"/>
    <addaction name="actClearImage"/>
    <addaction name="actAddSalary"/>
+   <addaction name="actCutSalary"/>
    <addaction name="separator"/>
    <addaction name="actSave"/>
    <addaction name="actCancel"/>
@@ -829,6 +830,15 @@
    </property>
    <property name="text">
     <string>退出</string>
+   </property>
+  </action>
+  <action name="actCutSalary">
+   <property name="icon">
+    <iconset resource="QSqlTableModelDemo.qrc">
+     <normaloff>:/QSqlTabelModelDemo/Resources/TASKDECL.ICO</normaloff>:/QSqlTabelModelDemo/Resources/TASKDECL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>降工资</string>
    </property>
   </action>
  </widget>
