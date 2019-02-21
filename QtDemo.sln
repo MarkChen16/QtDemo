@@ -75,7 +75,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.4.1Q3DSurfaceDemo", "Q3D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11.2.1QSqlTableModelDemo", "QSqlTableModelDemo\QSqlTableModelDemo.vcxproj", "{B9540E03-02E3-4090-8A28-9EC0DE553D0F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QSqlRelationalTableDemo", "QSqlRelationalTableDemo\QSqlRelationalTableDemo.vcxproj", "{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11.5.1QSqlRelationalTableDemo", "QSqlRelationalTableDemo\QSqlRelationalTableDemo.vcxproj", "{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QBatteryBox", "QBatteryBox\QBatteryBox.vcxproj", "{73A1D13E-2571-41DA-AE69-1AD820D683E1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QBatteryBoxDemo", "QBatteryBoxDemo\QBatteryBoxDemo.vcxproj", "{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -231,6 +235,14 @@ Global
 		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Debug|x86.Build.0 = Debug|Win32
 		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Release|x86.ActiveCfg = Release|Win32
 		{DB7DAE34-475F-4C9F-9093-0FCD4059C1F4}.Release|x86.Build.0 = Release|Win32
+		{73A1D13E-2571-41DA-AE69-1AD820D683E1}.Debug|x86.ActiveCfg = Debug|Win32
+		{73A1D13E-2571-41DA-AE69-1AD820D683E1}.Debug|x86.Build.0 = Debug|Win32
+		{73A1D13E-2571-41DA-AE69-1AD820D683E1}.Release|x86.ActiveCfg = Release|Win32
+		{73A1D13E-2571-41DA-AE69-1AD820D683E1}.Release|x86.Build.0 = Release|Win32
+		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Debug|x86.ActiveCfg = Debug|Win32
+		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Debug|x86.Build.0 = Debug|Win32
+		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Release|x86.ActiveCfg = Release|Win32
+		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
