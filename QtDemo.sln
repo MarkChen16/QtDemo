@@ -79,7 +79,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11.5.1QSqlRelationalTableDe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QBatteryBox", "QBatteryBox\QBatteryBox.vcxproj", "{73A1D13E-2571-41DA-AE69-1AD820D683E1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QBatteryBoxDemo", "QBatteryBoxDemo\QBatteryBoxDemo.vcxproj", "{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12.2.4QBatteryBoxDemo", "QBatteryBoxDemo\QBatteryBoxDemo.vcxproj", "{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QPenDialogLib", "QPenDialogLib\QPenDialogLib.vcxproj", "{E28FE705-F4E8-4764-9381-3B888D1757D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,10 @@ Global
 		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Debug|x86.Build.0 = Debug|Win32
 		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Release|x86.ActiveCfg = Release|Win32
 		{2F9E5B37-BF25-4345-BAFF-72ED71214B5C}.Release|x86.Build.0 = Release|Win32
+		{E28FE705-F4E8-4764-9381-3B888D1757D8}.Debug|x86.ActiveCfg = Debug|Win32
+		{E28FE705-F4E8-4764-9381-3B888D1757D8}.Debug|x86.Build.0 = Debug|Win32
+		{E28FE705-F4E8-4764-9381-3B888D1757D8}.Release|x86.ActiveCfg = Release|Win32
+		{E28FE705-F4E8-4764-9381-3B888D1757D8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
