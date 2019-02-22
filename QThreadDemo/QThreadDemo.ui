@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QThreadDemoClass</class>
+ <widget class="QMainWindow" name="QThreadDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>805</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QThreadDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>骰子结果</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>推送方式：应用信号槽</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="lstDice"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="title">
+        <string>骰子结果</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>拉取方式：应用qmutex互斥锁同步</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="lstDicePush"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actStart"/>
+   <addaction name="actPauseResume"/>
+   <addaction name="actAskForStop"/>
+   <addaction name="actStop"/>
+   <addaction name="separator"/>
+   <addaction name="actShowCopy"/>
+   <addaction name="actShowBuff"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <action name="actStart">
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/MYSL.ICO</normaloff>:/QThreadDemo/Resources/MYSL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>启动线程</string>
+   </property>
+  </action>
+  <action name="actPauseResume">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/NOTEL.ICO</normaloff>:/QThreadDemo/Resources/NOTEL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>暂停线程</string>
+   </property>
+  </action>
+  <action name="actAskForStop">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/CNFNOT.ICO</normaloff>:/QThreadDemo/Resources/CNFNOT.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>请求停止</string>
+   </property>
+  </action>
+  <action name="actStop">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/FOLDER.ICO</normaloff>:/QThreadDemo/Resources/FOLDER.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>停止线程</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/OOFL.ICO</normaloff>:/QThreadDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </action>
+  <action name="actShowCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/MSN.ICO</normaloff>:/QThreadDemo/Resources/MSN.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>显示副本</string>
+   </property>
+  </action>
+  <action name="actShowBuff">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/POSTITL.ICO</normaloff>:/QThreadDemo/Resources/POSTITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>显示缓存</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QThreadDemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
