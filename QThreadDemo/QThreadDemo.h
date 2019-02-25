@@ -13,6 +13,11 @@ class QThreadDemo : public QMainWindow
 public:
 	QThreadDemo(QWidget *parent = Q_NULLPTR);
 
+	QDiceCup cup;
+
+signals:
+	void closeCup();
+
 protected:
 	void closeEvent(QCloseEvent *event) override;
 
@@ -23,6 +28,7 @@ protected:
 	void on_actStop_triggered();
 	void on_actShowCopy_triggered();
 	void on_actShowBuff_triggered();
+	void on_actShowHistory_triggered();
 	void on_actQuit_triggered();
 
 	void on_started();
@@ -35,6 +41,5 @@ protected:
 private:
 	Ui::QThreadDemoClass ui;
 
-	QDiceCup cup;
 	QTimer *timer;
 };

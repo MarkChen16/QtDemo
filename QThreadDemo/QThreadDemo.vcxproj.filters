@@ -64,14 +64,38 @@
     <ClCompile Include="GeneratedFiles\Release\moc_QDiceCup.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="DlgShowCopy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DlgShowCopy.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DlgShowCopy.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QThreadShow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QThreadShow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QThreadShow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_QThreadDemo.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_DlgShowCopy.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QThreadDemo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="DlgShowCopy.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -85,6 +109,12 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="QThreadDemo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DlgShowCopy.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QThreadShow.hpp">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>

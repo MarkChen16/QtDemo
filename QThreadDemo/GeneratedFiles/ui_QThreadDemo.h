@@ -36,6 +36,7 @@ public:
     QAction *actQuit;
     QAction *actShowCopy;
     QAction *actShowBuff;
+    QAction *actShowHistory;
     QWidget *centralWidget;
     QHBoxLayout *horizontalLayout;
     QSplitter *splitter;
@@ -95,6 +96,12 @@ public:
         QIcon icon6;
         icon6.addFile(QStringLiteral(":/QThreadDemo/Resources/POSTITL.ICO"), QSize(), QIcon::Normal, QIcon::Off);
         actShowBuff->setIcon(icon6);
+        actShowHistory = new QAction(QThreadDemoClass);
+        actShowHistory->setObjectName(QStringLiteral("actShowHistory"));
+        actShowHistory->setEnabled(false);
+        QIcon icon7;
+        icon7.addFile(QStringLiteral(":/QThreadDemo/Resources/ACTIVITL.ICO"), QSize(), QIcon::Normal, QIcon::Off);
+        actShowHistory->setIcon(icon7);
         centralWidget = new QWidget(QThreadDemoClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
@@ -154,6 +161,7 @@ public:
         mainToolBar->addSeparator();
         mainToolBar->addAction(actShowCopy);
         mainToolBar->addAction(actShowBuff);
+        mainToolBar->addAction(actShowHistory);
         mainToolBar->addSeparator();
         mainToolBar->addAction(actQuit);
 
@@ -172,6 +180,7 @@ public:
         actQuit->setText(QApplication::translate("QThreadDemoClass", "\351\200\200\345\207\272\347\250\213\345\272\217", Q_NULLPTR));
         actShowCopy->setText(QApplication::translate("QThreadDemoClass", "\346\230\276\347\244\272\345\211\257\346\234\254", Q_NULLPTR));
         actShowBuff->setText(QApplication::translate("QThreadDemoClass", "\346\230\276\347\244\272\347\274\223\345\255\230", Q_NULLPTR));
+        actShowHistory->setText(QApplication::translate("QThreadDemoClass", "\346\230\276\347\244\272\345\216\206\345\217\262", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("QThreadDemoClass", "\351\252\260\345\255\220\347\273\223\346\236\234", Q_NULLPTR));
         label->setText(QApplication::translate("QThreadDemoClass", "\346\216\250\351\200\201\346\226\271\345\274\217\357\274\232\345\272\224\347\224\250\344\277\241\345\217\267\346\247\275", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("QThreadDemoClass", "\351\252\260\345\255\220\347\273\223\346\236\234", Q_NULLPTR));

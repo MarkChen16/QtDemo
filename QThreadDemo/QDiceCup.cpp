@@ -2,7 +2,8 @@
 
 #include <qdatetime.h>
 
-QDiceCup::QDiceCup(QObject * parent) : QThread(parent) {
+QDiceCup::QDiceCup(QObject * parent) : QThread(parent), mSemEmpty(3), mSemFull(0)
+{
 	
 }
 
@@ -86,12 +87,37 @@ QDiceBuff QDiceCup::currentBuff()
 {
 	QDiceBuff buff;
 
-	mMutexBuff.lock();
-	mWCBuff.wait(&mMutexBuff);	//等待通知
-	buff = mBuff;
-	mMutexBuff.unlock();
+	if (mMutexBuff.tryLock(1000))
+	{
+		//等待通知
+		if (mWCBuff.wait(&mMutexBuff, 1000))
+		{
+			buff = mBuff;
+
+			mBuff.clear();
+		}
+		mMutexBuff.unlock();
+	}
 
 	return buff;
+}
+
+QDiceBuff QDiceCup::historyBuff()
+{
+	QDiceBuff rev;
+
+	if (mSemFull.tryAcquire(1, 1000))
+	{
+		int preIndex = mCurrentIndex - 1;
+		if (preIndex < 0) preIndex = 2;
+
+		rev = lstBuff[preIndex];	//复制缓存器
+		lstBuff[preIndex].clear();
+
+		mSemEmpty.release();	//有一个空的缓存器可以使用
+	}
+
+	return rev;
 }
 
 void QDiceCup::run()
@@ -130,15 +156,43 @@ void QDiceCup::run()
 
 				//放入缓存器
 				mMutexBuff.lock();
-				if (mBuff.count() >= 10) mBuff.clear();
 
 				mBuff << result;
+				if (mBuff.count() > 20) mBuff.removeAt(0);	//保持最大容量为20个
+
 				cnt = mBuff.count();
 
 				mMutexBuff.unlock();
 
 				//如果缓存器大于等于10，则唤醒所有等待的线程
 				if (cnt >= 10) mWCBuff.wakeAll();
+			}
+
+			//放入骰子结果历史缓存器
+			{
+				//如果当前缓存器已满，则请求一个空的缓存器
+				if (lstBuff[mCurrentIndex].count() >= 10)
+				{
+					if (mSemEmpty.tryAcquire(1, 1000))	//获取一个空的缓存器
+					{
+						mSemFull.release();	//有了一个满的缓存器
+
+						mCurrentIndex++;
+						if (mCurrentIndex == 3) mCurrentIndex = 0;
+
+						lstBuff[mCurrentIndex] << result;
+					}
+					else
+					{
+						//暂时没有空的缓存器
+
+					}
+				}
+				else
+				{
+					//当前缓存器还没满
+					lstBuff[mCurrentIndex] << result;
+				}
 			}
 
 		}

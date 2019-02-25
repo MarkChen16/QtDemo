@@ -28,11 +28,20 @@ struct QDiceResult
 	int z = 0;
 };
 
-//注意：定义QDiceResult为元数据类型，通过QVariant封闭在信号槽之间传输复杂数据
+/*注意：定义QDiceResult为元数据类型，通过QVariant封闭在信号槽之间传输复杂数据
+封装数据：
+QVariant var;
+var.setValue(result);
+
+拆封数据：
+QDiceResult result = var.value<QDiceResult>();
+*/
 Q_DECLARE_METATYPE(QDiceResult)
 
 //定义缓冲器
 typedef QList<QDiceResult> QDiceBuff;
+
+Q_DECLARE_METATYPE(QDiceBuff)
 
 class QDiceCup : public QThread {
 	Q_OBJECT
@@ -54,6 +63,8 @@ public:
 
 	QDiceBuff currentBuff();
 
+	QDiceBuff historyBuff();
+
 signals:
 	//推送当前结果
 	void createdResult(QVariant var);
@@ -66,21 +77,28 @@ protected:
 private:
 	int mSeq = 0;
 
-	//当前骰子结果(推送/拉取方式，应用qmutex互斥锁同步)
+	//当前骰子结果(推送/拉取方式，应用qmutex，实现互斥锁同步)
 	QDiceResult mCurrentResult;
 
 	QMutex mMutexCurrent;
 
-	//当前骰子结果副本(拉取方式，应用qreadwritelock读写锁同步)
+	//当前骰子结果副本(拉取方式，应用qreadwritelock，实现读写锁同步)
 	QDiceResult mCurrentResultCopy;
 
 	QReadWriteLock mRWLCopy;
 
-	//结果缓存器(结果缓存，应用qmutex互斥锁加上qwaitcondition条件通知同步)
+	//结果缓存器(结果缓存，应用qmutex互斥锁加上qwaitcondition，实现基于条件同步)
 	QDiceBuff mBuff;
 
 	QMutex mMutexBuff;
 	QWaitCondition mWCBuff;
+
+	//缓存器(历史缓存器，应用qsemaphore，实现基于信号量的同步)
+	QDiceBuff lstBuff[3];
+	int mCurrentIndex = 0;
+
+	QSemaphore mSemEmpty;	//空的信号量同步
+	QSemaphore mSemFull;	//满的信号量同步
 
 	//线程控制
 	bool bPaused = false;

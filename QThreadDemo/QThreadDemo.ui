@@ -75,6 +75,7 @@
    <addaction name="separator"/>
    <addaction name="actShowCopy"/>
    <addaction name="actShowBuff"/>
+   <addaction name="actShowHistory"/>
    <addaction name="separator"/>
    <addaction name="actQuit"/>
   </widget>
@@ -157,6 +158,18 @@
    </property>
    <property name="text">
     <string>显示缓存</string>
+   </property>
+  </action>
+  <action name="actShowHistory">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QThreadDemo.qrc">
+     <normaloff>:/QThreadDemo/Resources/ACTIVITL.ICO</normaloff>:/QThreadDemo/Resources/ACTIVITL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>显示历史</string>
    </property>
   </action>
  </widget>

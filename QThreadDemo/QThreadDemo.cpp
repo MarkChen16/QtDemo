@@ -1,5 +1,7 @@
 ﻿#include "QThreadDemo.h"
 
+#include "DlgShowCopy.hpp"
+
 #pragma execution_character_set("UTF-8")
 
 QThreadDemo::QThreadDemo(QWidget *parent)
@@ -20,11 +22,15 @@ QThreadDemo::QThreadDemo(QWidget *parent)
 	//这个信号和槽不在同一个线程，第五个参数取值为自动、同一线程，不同线程， 阻塞线程，唯一线程
 	bOK = connect(&cup, SIGNAL(createdResult(QVariant)), this, SLOT(on_createdResult(QVariant)));
 
-	timer->start(1000);
+	timer->start(800);
 }
 
 void QThreadDemo::closeEvent(QCloseEvent * event)
 {
+	//触发信号，先关闭所有窗口
+	emit closeCup();
+
+	//关闭cup
 	if (cup.isRunning()) cup.stopCup();
 }
 
@@ -59,10 +65,38 @@ void QThreadDemo::on_actStop_triggered()
 
 void QThreadDemo::on_actShowCopy_triggered()
 {
+	DlgShowCopy *DlgShow = new DlgShowCopy(0, "显示副本", this);
+	DlgShow->setAttribute(Qt::WA_DeleteOnClose);
+	DlgShow->setWindowFlag(Qt::Dialog, true);
+	DlgShow->setWindowFlag(Qt::WindowStaysOnTopHint, true);
+
+	connect(this, SIGNAL(closeCup()), DlgShow, SLOT(close()));	//将信号绑定在槽函数
+
+	DlgShow->show();
 }
 
 void QThreadDemo::on_actShowBuff_triggered()
 {
+	DlgShowCopy *DlgShow = new DlgShowCopy(1, "显示结果缓存", this);
+	DlgShow->setAttribute(Qt::WA_DeleteOnClose);
+	DlgShow->setWindowFlag(Qt::Dialog, true);
+	DlgShow->setWindowFlag(Qt::WindowStaysOnTopHint, true);
+
+	connect(this, SIGNAL(closeCup()), DlgShow, SLOT(close()));
+
+	DlgShow->show();
+}
+
+void QThreadDemo::on_actShowHistory_triggered()
+{
+	DlgShowCopy *DlgShow = new DlgShowCopy(2, "显示历史缓存", this);
+	DlgShow->setAttribute(Qt::WA_DeleteOnClose);
+	DlgShow->setWindowFlag(Qt::Dialog, true);
+	DlgShow->setWindowFlag(Qt::WindowStaysOnTopHint, true);
+
+	connect(this, SIGNAL(closeCup()), DlgShow, SLOT(close()));
+
+	DlgShow->show();
 }
 
 void QThreadDemo::on_actQuit_triggered()
@@ -78,6 +112,7 @@ void QThreadDemo::on_started()
 	ui.actStop->setEnabled(true);
 	ui.actShowCopy->setEnabled(true);
 	ui.actShowBuff->setEnabled(true);
+	ui.actShowHistory->setEnabled(true);
 }
 
 void QThreadDemo::on_finished()
@@ -88,6 +123,7 @@ void QThreadDemo::on_finished()
 	ui.actStop->setEnabled(false);
 	ui.actShowCopy->setEnabled(false);
 	ui.actShowBuff->setEnabled(false);
+	ui.actShowHistory->setEnabled(false);
 }
 
 void QThreadDemo::on_createdResult(QVariant var)
