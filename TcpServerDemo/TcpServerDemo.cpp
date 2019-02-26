@@ -7,7 +7,7 @@ TcpServerDemo::TcpServerDemo(QWidget *parent)
 
 	this->setCentralWidget(ui.lstMsg);
 
-	mServer = new TcpServer();
+	mServer = new TcpServer("127.0.0.1", 8008, this);
 	connect(mServer, SIGNAL(started()), this, SLOT(onStarted()));
 	connect(mServer, SIGNAL(finished()), this, SLOT(onStoped()));
 }
