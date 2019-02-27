@@ -2,9 +2,10 @@
 
 #include <qdatetime.h>
 
-QDiceCup::QDiceCup(QObject * parent) : QThread(parent), mSemEmpty(3), mSemFull(0)
+QDiceCup::QDiceCup(QObject * parent) : QThread(parent), mSemEmpty(2), mSemFull(0)
 {
-	
+	//注册元类型，使用数据类型可以在信号槽使用
+	qRegisterMetaType<QDiceResult>("QDiceResult");
 }
 
 QDiceCup::~QDiceCup() {
@@ -42,9 +43,11 @@ void QDiceCup::resumeCup()
 bool QDiceCup::askForStopCup(unsigned long time)
 {
 	//请求停止
-	QMutexLocker locker(&mMutexThread);
+	{
+		QMutexLocker locker(&mMutexThread);
+		bAskForStop = true;
+	}
 
-	bAskForStop = true;
 	return this->wait(time);
 }
 
@@ -108,8 +111,7 @@ QDiceBuff QDiceCup::historyBuff()
 
 	if (mSemFull.tryAcquire(1, 1000))
 	{
-		int preIndex = mCurrentIndex - 1;
-		if (preIndex < 0) preIndex = 2;
+		int preIndex = mCurrentIndex == 0 ? 1 : 0;
 
 		rev = lstBuff[preIndex];	//复制缓存器
 		lstBuff[preIndex].clear();
@@ -124,77 +126,79 @@ void QDiceCup::run()
 {
 	qsrand(QTime::currentTime().msec());
 
-	while (bAskForStop == false)
+	while (true)
 	{
 		this->msleep(1000);
 
-		if (bPaused == false)
+		//判断是否退出或者暂停
 		{
-			//产生新的骰子结果
-			QDiceResult result = createDiceResule();
+			QMutexLocker locker(&mMutexThread);
 
-			QVariant var;
-			var.setValue(result);
+			if (bAskForStop) break;
 
-			emit createdResult(var);
+			if (bPaused) continue;
+		}
 
-			//产生当前骰子结果
+		//产生新的骰子结果
+		QDiceResult result = createDiceResule();
+
+		emit createdResult(result);
+
+		//产生当前骰子结果
+		{
+			QMutexLocker locker(&mMutexCurrent);
+			mCurrentResult = result;
+		}
+
+		//产生当前骰子结果副本
+		{
+			QWriteLocker locker(&mRWLCopy);
+			mCurrentResultCopy = result;
+		}
+
+		//放入骰子结果缓存器
+		{
+			int cnt = 0;
+
+			//放入缓存器
+			mMutexBuff.lock();
+
+			mBuff << result;
+			if (mBuff.count() > 20) mBuff.removeAt(0);	//保持最大容量为20个
+
+			cnt = mBuff.count();
+
+			mMutexBuff.unlock();
+
+			//如果缓存器大于等于10，则唤醒所有等待的线程
+			if (cnt >= 10) mWCBuff.wakeAll();
+		}
+
+		//放入骰子结果历史缓存器
+		{
+			//如果当前缓存器已满，则请求一个空的缓存器
+			if (lstBuff[mCurrentIndex].count() >= 10)
 			{
-				QMutexLocker locker(&mMutexCurrent);
-				mCurrentResult = result;
-			}
-
-			//产生当前骰子结果副本
-			{
-				QWriteLocker locker(&mRWLCopy);
-				mCurrentResultCopy = result;
-			}
-
-			//放入骰子结果缓存器
-			{
-				int cnt = 0;
-
-				//放入缓存器
-				mMutexBuff.lock();
-
-				mBuff << result;
-				if (mBuff.count() > 20) mBuff.removeAt(0);	//保持最大容量为20个
-
-				cnt = mBuff.count();
-
-				mMutexBuff.unlock();
-
-				//如果缓存器大于等于10，则唤醒所有等待的线程
-				if (cnt >= 10) mWCBuff.wakeAll();
-			}
-
-			//放入骰子结果历史缓存器
-			{
-				//如果当前缓存器已满，则请求一个空的缓存器
-				if (lstBuff[mCurrentIndex].count() >= 10)
+				if (mSemEmpty.tryAcquire(1, 1000))	//获取一个空的缓存器
 				{
-					if (mSemEmpty.tryAcquire(1, 1000))	//获取一个空的缓存器
-					{
-						mSemFull.release();	//有了一个满的缓存器
+					mSemFull.release();	//有了一个满的缓存器
 
-						mCurrentIndex++;
-						if (mCurrentIndex == 3) mCurrentIndex = 0;
+					mCurrentIndex++;
+					if (mCurrentIndex > 1) mCurrentIndex = 0;
 
-						lstBuff[mCurrentIndex] << result;
-					}
-					else
-					{
-						//暂时没有空的缓存器
-
-					}
+					lstBuff[mCurrentIndex] << result;
 				}
 				else
 				{
-					//当前缓存器还没满
-					lstBuff[mCurrentIndex] << result;
+					//暂时没有空的缓存器，什么也不做
+
 				}
 			}
-
+			else
+			{
+				//当前缓存器还没满
+				lstBuff[mCurrentIndex] << result;
+			}
 		}
 	}
 

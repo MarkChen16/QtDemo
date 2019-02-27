@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SimpleTcpDemoClass</class>
+ <widget class="QMainWindow" name="SimpleTcpDemoClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>303</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SimpleTcpDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QListWidget" name="lstMsg">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>431</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actStart"/>
+   <addaction name="actStop"/>
+   <addaction name="actNewClient"/>
+   <addaction name="separator"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actStart">
+   <property name="icon">
+    <iconset resource="SimpleTcpDemo.qrc">
+     <normaloff>:/SimpleTcpDemo/Resources/MYSL.ICO</normaloff>:/SimpleTcpDemo/Resources/MYSL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>开始监听</string>
+   </property>
+  </action>
+  <action name="actStop">
+   <property name="icon">
+    <iconset resource="SimpleTcpDemo.qrc">
+     <normaloff>:/SimpleTcpDemo/Resources/APPTL.ICO</normaloff>:/SimpleTcpDemo/Resources/APPTL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>停止监听</string>
+   </property>
+  </action>
+  <action name="actNewClient">
+   <property name="icon">
+    <iconset resource="SimpleTcpDemo.qrc">
+     <normaloff>:/SimpleTcpDemo/Resources/MSN.ICO</normaloff>:/SimpleTcpDemo/Resources/MSN.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>创建客户端</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="icon">
+    <iconset resource="SimpleTcpDemo.qrc">
+     <normaloff>:/SimpleTcpDemo/Resources/OOFL.ICO</normaloff>:/SimpleTcpDemo/Resources/OOFL.ICO</iconset>
+   </property>
+   <property name="text">
+    <string>退出程序</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="SimpleTcpDemo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

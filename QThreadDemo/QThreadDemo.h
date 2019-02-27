@@ -34,7 +34,7 @@ protected:
 	void on_started();
 	void on_finished();
 
-	void on_createdResult(QVariant var);
+	void on_createdResult(QDiceResult result);
 
 	void on_timeout();
 

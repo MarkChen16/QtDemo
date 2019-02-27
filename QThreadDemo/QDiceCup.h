@@ -28,20 +28,12 @@ struct QDiceResult
 	int z = 0;
 };
 
-/*注意：定义QDiceResult为元数据类型，通过QVariant封闭在信号槽之间传输复杂数据
-封装数据：
-QVariant var;
-var.setValue(result);
-
-拆封数据：
-QDiceResult result = var.value<QDiceResult>();
+/*注意：定义QDiceResult为元类型，然后在构造函数中通过qRegisterMetaType注册元类型
 */
 Q_DECLARE_METATYPE(QDiceResult)
 
 //定义缓冲器
 typedef QList<QDiceResult> QDiceBuff;
-
-Q_DECLARE_METATYPE(QDiceBuff)
 
 class QDiceCup : public QThread {
 	Q_OBJECT
@@ -67,7 +59,7 @@ public:
 
 signals:
 	//推送当前结果
-	void createdResult(QVariant var);
+	void createdResult(QDiceResult result);
 
 protected:
 	void run() override;
@@ -94,7 +86,7 @@ private:
 	QWaitCondition mWCBuff;
 
 	//缓存器(历史缓存器，应用qsemaphore，实现基于信号量的同步)
-	QDiceBuff lstBuff[3];
+	QDiceBuff lstBuff[2];
 	int mCurrentIndex = 0;
 
 	QSemaphore mSemEmpty;	//空的信号量同步

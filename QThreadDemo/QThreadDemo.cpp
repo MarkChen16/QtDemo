@@ -20,7 +20,7 @@ QThreadDemo::QThreadDemo(QWidget *parent)
 	bOK = connect(&cup, SIGNAL(finished()), this, SLOT(on_finished()));
 
 	//这个信号和槽不在同一个线程，第五个参数取值为自动、同一线程，不同线程， 阻塞线程，唯一线程
-	bOK = connect(&cup, SIGNAL(createdResult(QVariant)), this, SLOT(on_createdResult(QVariant)));
+	bOK = connect(&cup, SIGNAL(createdResult(QDiceResult)), this, SLOT(on_createdResult(QDiceResult)));
 
 	timer->start(800);
 }
@@ -108,6 +108,8 @@ void QThreadDemo::on_started()
 {
 	ui.actStart->setEnabled(false);
 	ui.actPauseResume->setEnabled(true);
+	ui.actPauseResume->setText("暂停线程");
+	ui.actPauseResume->setChecked(false);
 	ui.actAskForStop->setEnabled(true);
 	ui.actStop->setEnabled(true);
 	ui.actShowCopy->setEnabled(true);
@@ -119,6 +121,8 @@ void QThreadDemo::on_finished()
 {
 	ui.actStart->setEnabled(true);
 	ui.actPauseResume->setEnabled(false);
+	ui.actPauseResume->setText("暂停线程");
+	ui.actPauseResume->setChecked(false);
 	ui.actAskForStop->setEnabled(false);
 	ui.actStop->setEnabled(false);
 	ui.actShowCopy->setEnabled(false);
@@ -126,10 +130,8 @@ void QThreadDemo::on_finished()
 	ui.actShowHistory->setEnabled(false);
 }
 
-void QThreadDemo::on_createdResult(QVariant var)
+void QThreadDemo::on_createdResult(QDiceResult result)
 {
-	QDiceResult result = var.value<QDiceResult>();	//获取QVariant的值，从而获取复杂类型参数的值
-
 	QString strInfo = QString::asprintf("%d Times: (%d %d %d)", result.seq, result.x, result.y, result.z);
 
 	ui.lstDice->insertItem(0, strInfo);
