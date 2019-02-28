@@ -10,34 +10,54 @@
 #include <qdatastream.h>
 #include <qbytearray.h>
 
-class ThreadedTcpServer : public QObject 
+#include <qlist.h>
+
+class ClientRequest;
+
+class ThreadedTcpServer : public QTcpServer
 {
 	Q_OBJECT
 
 public:
-
-	ThreadedTcpServer(QString hostName, int hostPort, QObject * parent = Q_NULLPTR);
+	ThreadedTcpServer(QObject * parent = Q_NULLPTR);
 	~ThreadedTcpServer();
 
-	bool startListen();
+	bool startListen(QString hostName, int hostPort);
 	void stopListen();
 
-	QString errorString();
-
-signals:
-	void started();
-	void stoped();
+	void closeAllRequest();
 
 	private slots:
-	void on_newConnection();
-	void on_readyRead();
+	void addClientRequest();
+	void delClientRequest();
+
+protected:
+	void incomingConnection(qintptr socketDescriptor);
 
 private:
-	QTcpServer *mServer;
-
-	QString mHostName;
-	int mHostPort;
-
-	static QByteArray mFILE_DATA;
-	static QMutex mMUTEX;
+	QList<ClientRequest *> mRequestList;
+	QMutex mMutex;
 };
+
+class ClientRequest : public QThread
+{
+	Q_OBJECT
+
+private:
+	ClientRequest(qintptr socketDescriptor, QObject *parent = nullptr);
+
+public:
+	virtual ~ClientRequest();
+
+	void setHandle(qintptr socketDescriptor);
+	void run();
+
+	private slots:
+	void on_destroyed();
+
+private:
+	qintptr mSocketDescriptor;
+
+	friend class ThreadedTcpServer;
+};
+

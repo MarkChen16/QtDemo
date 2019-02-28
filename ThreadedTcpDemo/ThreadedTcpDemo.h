@@ -19,9 +19,6 @@ public:
 	void on_actStop_triggered();
 	void on_actQuit_triggered();
 
-	void on_started();
-	void on_stoped();
-
 private:
 	Ui::ThreadedTcpDemoClass ui;
 
