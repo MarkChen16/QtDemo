@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    
+    
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sys_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="Sys_EN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SysIcon\ACTIVITL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\ACTIVITS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\APPTL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\APPTS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\CNFNOT.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\CONFLICT.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\CONTACTL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\CONTACTS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\DISTLSTL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\DISTLSTS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\DOCL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\DOCS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\EXITEML.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\EXITEMS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\FOLDER.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\INFOMS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\IPML.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\IPMS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\MMSS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\MSN.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\MYSL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\NOTEL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\NOTES.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\OOFL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\OOFS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\POSTITL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\POSTITS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\POSTL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\POSTS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\RECL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\RECS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\REFBAR.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\REFBARH.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\REMOTEL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\REMOTES.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\REPORTL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\REPORTS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\RESENDL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\RESENDS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\RSSITEML.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\RSSITEMS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDCNCLL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDCNCLS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDREQL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDREQS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDRESNL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDRESNS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDRESPL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDRESPS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDRESTL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SCDRESTS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SECRECL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SECRECS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SECURL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SECURS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SIGNL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SIGNS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\SMSS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKACCL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKACCS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKDECL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKDECS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKREQL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKREQS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SysIcon\TASKS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="sysicon.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>
