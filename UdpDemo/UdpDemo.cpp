@@ -109,7 +109,7 @@ void UdpDemo::on_actBind_triggered()
 		ui.btnBroadCast->setEnabled(true);
 		
 		ui.actJoinGroup->setEnabled(false);
-		ui.actJoinGroup->setEnabled(false);
+		ui.actLeaveGroup->setEnabled(false);
 		ui.btnMulticast->setEnabled(false);
 	}
 	else
@@ -128,7 +128,7 @@ void UdpDemo::on_actUnbind_triggered()
 	ui.btnBroadCast->setEnabled(false);
 	
 	ui.actJoinGroup->setEnabled(true);
-	ui.actJoinGroup->setEnabled(false);
+	ui.actLeaveGroup->setEnabled(false);
 	ui.btnMulticast->setEnabled(false);
 }
 
