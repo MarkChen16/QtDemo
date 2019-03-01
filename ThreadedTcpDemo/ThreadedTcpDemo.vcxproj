@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D10C322D-EC8B-4BEF-A76F-D84826CE388A}</ProjectGuid>
     <Keyword>Qt4VSv1.0</Keyword>
-    <ProjectName>14.3.2ThreadedTcpDemo</ProjectName>
+    <ProjectName>14.2.2ThreadedTcpDemo</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

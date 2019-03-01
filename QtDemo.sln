@@ -97,7 +97,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14.2.1SimpleTcpDemo", "Simp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14.3.2ThreadedTcpDemo", "ThreadedTcpDemo\ThreadedTcpDemo.vcxproj", "{D10C322D-EC8B-4BEF-A76F-D84826CE388A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcpClientDemo", "TcpClientDemo\TcpClientDemo.vcxproj", "{E6205927-D753-4784-9300-10E53FE3DED4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14.3.3TcpClientDemo", "TcpClientDemo\TcpClientDemo.vcxproj", "{E6205927-D753-4784-9300-10E53FE3DED4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UdpDemo", "UdpDemo\UdpDemo.vcxproj", "{AD043DD4-3D6F-4801-9B76-A3B8CF6364A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -297,6 +299,10 @@ Global
 		{E6205927-D753-4784-9300-10E53FE3DED4}.Debug|x86.Build.0 = Debug|Win32
 		{E6205927-D753-4784-9300-10E53FE3DED4}.Release|x86.ActiveCfg = Release|Win32
 		{E6205927-D753-4784-9300-10E53FE3DED4}.Release|x86.Build.0 = Release|Win32
+		{AD043DD4-3D6F-4801-9B76-A3B8CF6364A0}.Debug|x86.ActiveCfg = Debug|Win32
+		{AD043DD4-3D6F-4801-9B76-A3B8CF6364A0}.Debug|x86.Build.0 = Debug|Win32
+		{AD043DD4-3D6F-4801-9B76-A3B8CF6364A0}.Release|x86.ActiveCfg = Release|Win32
+		{AD043DD4-3D6F-4801-9B76-A3B8CF6364A0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
