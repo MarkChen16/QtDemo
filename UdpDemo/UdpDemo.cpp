@@ -27,6 +27,8 @@ UdpDemo::UdpDemo(QWidget *parent)
 
 void UdpDemo::on_readyRead()
 {
+	QUdpSocket *currUdpSocket = (QUdpSocket *)sender();
+
 	//是否存在挂起的数据报文
 	while (mUdpSocket->hasPendingDatagrams())
 	{
@@ -39,13 +41,32 @@ void UdpDemo::on_readyRead()
 		quint64 qiRead = mUdpSocket->readDatagram(arr.data(), arr.size(), &peerAddr, &peerPort);
 		if (qiRead != -1)
 		{
-			peerAddr = QHostAddress(peerAddr.toIPv4Address());
-
-			QString szMsg = QString("%1 %2[%3]: %4").arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss")).arg(peerAddr.toString()).arg(peerPort).arg(arr.data());
-
-			ui.lstMsg->insertItem(0, szMsg);
+			//如果是其他主机发的报文则显示
+			if (isLocalAddress(peerAddr) == false)
+			{
+				QHostAddress addr(peerAddr.toIPv4Address());
+				QString szMsg = QString("%1 %2[%3]: %4").arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss")).arg(addr.toString()).arg(peerPort).arg(arr.data());
+				ui.lstMsg->insertItem(0, szMsg);
+			}
 		}
 	}
+}
+
+bool UdpDemo::isLocalAddress(QHostAddress addr)
+{
+	bool bFound = false;
+
+	QList<QHostAddress> lstAddr = QNetworkInterface::allAddresses();
+	for each (auto var in lstAddr)
+	{
+		if (addr == var)
+		{
+			bFound = true;
+			break;
+		}
+	}
+
+	return bFound;
 }
 
 void UdpDemo::on_stateChanged(QAbstractSocket::SocketState state)
@@ -113,12 +134,12 @@ void UdpDemo::on_actUnbind_triggered()
 
 void UdpDemo::on_actJoinGroup_triggered()
 {
+	mGroupAddr = QHostAddress(ui.cbMulticastAddr->currentText());
 	quint16 groupPort = ui.sbMulticastPort->value();
 
+	//加入组播(组播地址和端口)
 	if (mUdpSocket->bind(QHostAddress::AnyIPv4, groupPort, QUdpSocket::ShareAddress))
 	{
-		//加入组播
-		mGroupAddr = QHostAddress(ui.cbMulticastAddr->currentText());
 		mUdpSocket->joinMulticastGroup(mGroupAddr);
 
 		ui.actBind->setEnabled(false);
@@ -149,19 +170,19 @@ void UdpDemo::on_actLeaveGroup_triggered()
 	ui.btnBroadCast->setEnabled(false);
 
 	ui.actJoinGroup->setEnabled(true);
-	ui.actJoinGroup->setEnabled(false);
+	ui.actLeaveGroup->setEnabled(false);
 	ui.btnMulticast->setEnabled(false);
 }
 
 void UdpDemo::on_actClear_triggered()
 {
-	mUdpSocket->abort();
-
 	ui.lstMsg->clear();
 }
 
 void UdpDemo::on_actQuit_triggered()
 {
+	mUdpSocket->abort();
+
 	this->close();
 }
 
@@ -199,9 +220,9 @@ void UdpDemo::on_btnMulticast_clicked()
 	QByteArray arr = ui.txtMsg->text().toUtf8();
 	if (arr.count() <= 0) return;
 
-	quint16 hostPort = ui.sbMulticastPort->value();
+	quint16 groupPort = ui.sbMulticastPort->value();
 
-	qint64 qiWrite = mUdpSocket->writeDatagram(arr, mGroupAddr, hostPort);
+	qint64 qiWrite = mUdpSocket->writeDatagram(arr, mGroupAddr, groupPort);
 	if (qiWrite == -1)
 	{
 		QMessageBox::warning(this, "错误", QString("发送消息失败，返回错误{%1}").arg(mUdpSocket->errorString()));

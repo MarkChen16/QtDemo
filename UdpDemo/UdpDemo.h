@@ -14,6 +14,8 @@ class UdpDemo : public QMainWindow
 public:
 	UdpDemo(QWidget *parent = Q_NULLPTR);
 
+	bool isLocalAddress(QHostAddress addr);
+
 	private slots:
 	void on_readyRead();
 	void on_stateChanged(QAbstractSocket::SocketState state);
