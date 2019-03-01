@@ -55,6 +55,15 @@
     <ClCompile Include="GeneratedFiles\qrc_TcpClientDemo.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="ThreadedTcpClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ThreadedTcpClient.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ThreadedTcpClient.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="TcpClientDemo.h">
@@ -65,6 +74,9 @@
     </CustomBuild>
     <CustomBuild Include="TcpClientDemo.qrc">
       <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ThreadedTcpClient.hpp">
+      <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

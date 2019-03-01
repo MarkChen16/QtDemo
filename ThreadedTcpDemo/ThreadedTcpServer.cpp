@@ -1,5 +1,7 @@
 ﻿#include "ThreadedTcpServer.h"
 
+//静态成员变量
+ClientData ClientData::_Instance;
 
 ThreadedTcpServer::ThreadedTcpServer(QObject * parent) :
 	QTcpServer(parent)
@@ -41,7 +43,7 @@ void ThreadedTcpServer::addClientRequest()
 
 	mRequestList << (ClientRequest *)sender();
 
-	qDebug() << QString("add ClientRequest");
+	qDebug() << QString("add ClientRequest %1").arg(mRequestList.count());
 }
 
 void ThreadedTcpServer::delClientRequest()
@@ -51,7 +53,7 @@ void ThreadedTcpServer::delClientRequest()
 	int intIndex = mRequestList.indexOf((ClientRequest *)sender(), 0);
 	if (intIndex >= 0) mRequestList.removeAt(intIndex);
 
-	qDebug() << QString("del ClientRequest");
+	qDebug() << QString("del ClientRequest %1").arg(mRequestList.count());
 }
 
 void ThreadedTcpServer::incomingConnection(qintptr socketDescriptor)
@@ -77,15 +79,17 @@ ClientRequest::~ClientRequest()
 	qDebug() << "ClientRequest destruct().";
 }
 
-void ClientRequest::setHandle(qintptr socketDescriptor)
+void ClientRequest::setDescriptor(qintptr socketDescriptor)
 {
 	mSocketDescriptor = socketDescriptor;
 }
 
 void ClientRequest::run()
 {
+	//采用长连接的方式，发送文件数据，每次发1K的数据块
 	QTcpSocket *mClient = new QTcpSocket();
 	mClient->setSocketDescriptor(mSocketDescriptor);
+	mClient->setReadBufferSize(1024 * 1024);
 
 	connect(mClient, SIGNAL(disconnected()), mClient, SLOT(deleteLater()));	//关闭后自动删除
 	connect(mClient, SIGNAL(destroyed()), this, SLOT(on_destroyed()));		//删除时输出提示信息
@@ -94,17 +98,47 @@ void ClientRequest::run()
 	QDataStream ds(mClient);
 	ds.setVersion(QDataStream::Qt_4_0);
 
-	//接收请求
-	mClient->waitForReadyRead();
-	QString strWho, strWords;
-	ds >> strWho >> strWords;
+	//获取数据
+	QByteArray arrData = ClientData::GetInstance().getData();
 
-	//处理请求
-	QThread::currentThread()->msleep(10 * 1000);
-
-	//发送响应
-	ds << QString("Server") << QString("Success!");
+	//发送数据大小
+	int intPacketSize = 1 * 1024;
+	int intSize = arrData.count();
+	ds << intSize;
+	mClient->flush();
 	mClient->waitForBytesWritten();
+
+	mClient->waitForReadyRead();
+	bool bOk = false;
+	ds >> bOk;
+
+	//发送数据
+	while (arrData.count() > 0)
+	{
+		//发送数据块
+		QByteArray arrTmp;
+		if (arrData.count() >= intPacketSize)
+		{
+			arrTmp = arrData.left(intPacketSize);
+			arrData.remove(0, intPacketSize);
+		}
+		else
+		{
+			arrTmp = arrData;
+			arrData.clear();
+		}
+
+		ds << arrTmp;
+		mClient->flush();
+		mClient->waitForBytesWritten();
+
+		//接收响应
+		if (!mClient->waitForReadyRead()) break;
+		bool bOk = false;
+		ds >> bOk;
+
+		if (!bOk) break;
+	}
 
 	//关闭连接
 	mClient->disconnectFromHost();

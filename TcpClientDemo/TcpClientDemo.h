@@ -3,8 +3,7 @@
 #include <QtWidgets/QDialog>
 #include "ui_TcpClientDemo.h"
 
-#include <QtNetwork>
-#include <qdatastream.h>
+#include "ThreadedTcpClient.hpp"
 
 class TcpClientDemo : public QDialog
 {
@@ -17,8 +16,10 @@ public:
 	void on_btnConnect_clicked();
 	void on_btnQuit_clicked();
 
-	void on_readyRead();
+	void on_updateProgress(int iValue);
 
 private:
 	Ui::TcpClientDemoClass ui;
+
+	ThreadedTcpClient *mClient;
 };

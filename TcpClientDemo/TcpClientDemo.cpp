@@ -8,48 +8,28 @@ TcpClientDemo::TcpClientDemo(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
+
+	mClient = new ThreadedTcpClient(this);
+	connect(mClient, SIGNAL(updateProgress(int)), this, SLOT(on_updateProgress(int)));
 }
 
 void TcpClientDemo::on_btnConnect_clicked()
 {
-	QTcpSocket *mClient = new QTcpSocket();
-	connect(mClient, SIGNAL(disconnected()), mClient, SLOT(deleteLater()));
-	connect(mClient, SIGNAL(readyRead()), this, SLOT(on_readyRead()));
+	mClient->terminate();
+	mClient->wait();
 
-	QHostAddress addr("192.168.249.134");
-	mClient->connectToHost(addr, 8008);
-	if (!mClient->waitForConnected())
-	{
-		QMessageBox::warning(this, "警告", "连接主机失败，返回错误：" + mClient->errorString());
-		return;
-	}
-
-	QDataStream ds(mClient);
-	ds.setVersion(QDataStream::Qt_4_0);
-
-	ds << QString("Client") << QString("how are you?");
-	mClient->waitForBytesWritten();
+	mClient->start();
 }
 
 void TcpClientDemo::on_btnQuit_clicked()
 {
+	mClient->terminate();
+	mClient->wait();
+
 	this->close();
 }
 
-void TcpClientDemo::on_readyRead()
+void TcpClientDemo::on_updateProgress(int iValue)
 {
-	QTcpSocket *mClient = (QTcpSocket *)sender();
-
-	QDataStream ds(mClient);
-	ds.setVersion(QDataStream::Qt_4_0);
-
-	QString strWho, strWords;
-	ds.startTransaction();
-	ds >> strWho >> strWords;
-	if (!ds.commitTransaction()) return;
-
-	mClient->waitForDisconnected();
-
-	QMessageBox::information(this, "提示",  strWho + "：" + strWords);
+	ui.pbData->setValue(iValue);
 }
- 
